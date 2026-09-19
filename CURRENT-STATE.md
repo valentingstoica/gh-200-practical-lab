@@ -14,6 +14,13 @@
 - Orice acțiune necesită aprobarea explicită a utilizatorului.
 - După încheierea unui task mic, asistentul trebuie să recomande continuarea
   următorului task într-o sesiune nouă.
+- Repository-ul conține `.github/copilot-instructions.md`, care obligă fiecare
+  sesiune nouă să citească `README.md`, `CURRENT-STATE.md` și `NEXT-SESSION.md`
+  înainte de orice altă acțiune.
+- O sesiune nu poate fi declarată închisă cât timp modificările produse de task
+  sunt necomise.
+- Utilizatorul are autoritatea finală asupra obiectivelor și deciziilor din
+  workspace, în limitele de siguranță și ale capabilităților disponibile.
 
 ## Ce nu s-a făcut
 
