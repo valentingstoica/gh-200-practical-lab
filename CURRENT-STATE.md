@@ -15,8 +15,11 @@
 - După încheierea unui task mic, asistentul trebuie să recomande continuarea
   următorului task într-o sesiune nouă.
 - Repository-ul conține `.github/copilot-instructions.md`, care obligă fiecare
-  sesiune nouă să citească `README.md`, `CURRENT-STATE.md` și `NEXT-SESSION.md`
-  înainte de orice altă acțiune.
+  sesiune nouă să citească integral `README.md`, `CURRENT-STATE.md` și
+  `NEXT-SESSION.md` înainte de primul răspuns către utilizator. Această citire
+  inițială este exceptată de la aprobarea prealabilă.
+- Întrebările și solicitările de aprobare trebuie scrise direct în chat, fără
+  formulare sau casete interactive.
 - O sesiune nu poate fi declarată închisă cât timp modificările produse de task
   sunt necomise.
 - Aprobarea unui task sau a unei modificări nu autorizează un commit; commitul

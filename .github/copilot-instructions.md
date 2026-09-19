@@ -15,6 +15,9 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
   - ce fisiere intentionezi sa creezi ori sa modifici;
   - criteriul de finalizare.
 - Nu executa actiunea pana cand utilizatorul nu o aproba explicit.
+- Pune intrebarile si solicitarile de aprobare direct in chat si asteapta acolo
+  raspunsul utilizatorului. Nu folosi formulare sau casete interactive pentru
+  intrebari.
 - Utilizatorul este autoritatea finala asupra obiectivelor si deciziilor din
   workspace. Urmeaza-i instructiunile in limitele de siguranta si ale
   capabilitatilor disponibile.
@@ -35,10 +38,13 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 
 ## Memoria intre sesiuni
 
-- Primul lucru facut intr-o sesiune noua trebuie sa fie citirea integrala a
-  fisierelor `README.md`, `CURRENT-STATE.md` si `NEXT-SESSION.md`, pentru ca
-  asistentul sa cunoasca scopul, starea curenta si taskul planificat inainte sa
-  propuna sau sa execute orice actiune.
+- Intr-o sesiune noua, inainte de primul raspuns adresat utilizatorului, citeste
+  integral fisierele `README.md`, `CURRENT-STATE.md` si `NEXT-SESSION.md`, pentru
+  a cunoaste scopul, starea curenta si taskul planificat.
+- Citirea initiala obligatorie a acestor trei fisiere este exceptata de la
+  cerinta de a explica planul si de a obtine aprobarea in prealabil. Nu raspunde
+  utilizatorului si nu incepe nicio alta actiune pana cand citirea nu este
+  finalizata.
 - `CURRENT-STATE.md` descrie progresul, deciziile si lucrurile ramase nefacute.
 - `NEXT-SESSION.md` trebuie sa contina exact un singur task pentru sesiunea
   urmatoare.
