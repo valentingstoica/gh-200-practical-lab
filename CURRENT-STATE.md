@@ -19,6 +19,8 @@
   înainte de orice altă acțiune.
 - O sesiune nu poate fi declarată închisă cât timp modificările produse de task
   sunt necomise.
+- Aprobarea unui task sau a unei modificări nu autorizează un commit; commitul
+  poate fi creat numai în urma unei cereri directe și neechivoce a utilizatorului.
 - Utilizatorul are autoritatea finală asupra obiectivelor și deciziilor din
   workspace, în limitele de siguranță și ale capabilităților disponibile.
 - Convenția de adresare este ca asistentul să îi spună utilizatorului „boss” și

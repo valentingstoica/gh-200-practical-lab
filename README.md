@@ -37,6 +37,9 @@ După finalizarea singurului task al sesiunii:
 3. În `NEXT-SESSION.md` se păstrează exact un singur task pentru sesiunea următoare.
 4. Se verifică starea Git și se rezolvă toate modificările produse de task.
 5. Un commit se creează numai cu aprobarea explicită a utilizatorului.
+   Aprobarea unui task, a unei modificări sau discutarea necesității unui commit
+   nu reprezintă aprobare pentru commit. Utilizatorul trebuie să ceară direct
+   crearea commitului.
 6. Sesiunea nu este declarată închisă cât timp modificările produse de task sunt
    necomise; dacă lipsește aprobarea pentru commit, asistentul trebuie să o
    solicite înainte de a recomanda închiderea.

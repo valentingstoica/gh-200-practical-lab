@@ -29,6 +29,9 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 - Pastreaza modificarile concentrate pe obiectivul sesiunii si evita lucrul
   suplimentar care apartine unei sesiuni viitoare.
 - Nu crea niciun commit fara aprobarea explicita a utilizatorului.
+- Nu interpreta aprobarea unui task, cererea unei modificari, discutarea unui
+  commit sau o formulare ambigua drept aprobare pentru commit. Creeaza un commit
+  numai daca utilizatorul cere direct si neechivoc actiunea de commit.
 
 ## Memoria intre sesiuni
 
@@ -43,6 +46,8 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 - Verifica starea Git inainte sa declari sesiunea finalizata.
 - Nu recomanda inchiderea sesiunii cat timp modificarile produse de task sunt
   necomise. Daca aprobarea explicita pentru commit lipseste, solicit-o mai intai.
+- Solicitarea aprobarii pentru commit nu autorizeaza executarea lui pana cand
+  utilizatorul raspunde explicit ca doreste commitul.
 - La final, recomanda explicit inchiderea sesiunii si continuarea taskului ramas
   intr-o sesiune noua.
 
