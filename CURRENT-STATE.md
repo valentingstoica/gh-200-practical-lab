@@ -35,10 +35,28 @@
   și sunt structurate în cinci domenii cu ponderi.
 - Obiectivele, ponderile, observațiile pentru practica ulterioară și sursele
   oficiale sunt documentate în `GH-200-EXAM-OBJECTIVES.md`.
+- Traseul complet este documentat în `GH-200-STUDY-ROADMAP.md`.
+- Pregătirea va fi practice-first și va combina exemple izolate cu un proiect
+  software evolutiv.
+- Teoria va fi introdusă în porții mici, beginner-friendly, concrete și
+  ilustrative, numai când este necesară exercițiului.
+- Fiecare concept va fi legat de beneficiul și utilizarea sa pentru un software
+  developer sau DevOps engineer.
+- Bucla preferată este: problemă reală, teorie minimă, implementare, observare,
+  debugging, comparație cu producția și verificarea autonomiei.
+- GitHub Actions va fi explorat atât prin GitHub Web UI, cât și prin `gh`, iar
+  `gh api` va fi introdus gradual pentru administrare programatică.
+- Debugging-ul intenționat, securitatea, costul, performanța, citirea
+  workflow-urilor existente și navigarea documentației oficiale sunt elemente
+  recurente.
+- Traseul conține etape pentru fundamente, CI, date și operare, reutilizare,
+  acțiuni custom, administrare enterprise, securitate, supply chain și simulări
+  finale.
+- Funcțiile enterprise indisponibile în mediul real vor fi tratate transparent
+  prin documentație oficială și exerciții simulate, fără a pretinde execuția lor.
 
 ## Ce nu s-a făcut
 
-- Nu a fost stabilit traseul de studiu.
 - Nu a fost evaluat nivelul inițial al utilizatorului.
 - Nu a fost creat sau executat niciun workflow GitHub Actions.
 - Nu a fost creat niciun laborator practic.

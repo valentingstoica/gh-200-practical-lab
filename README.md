@@ -11,6 +11,15 @@ practice, debugging și recapitulare progresivă, nu prin memorarea izolată a t
 ## Mod de lucru
 
 - Fiecare sesiune are un singur task clar și limitat.
+- Pregătirea urmează traseul practic din `GH-200-STUDY-ROADMAP.md`.
+- Învățarea combină exemple izolate cu un proiect software evolutiv.
+- Teoria este introdusă în porții mici, când devine necesară practicii.
+- Explicațiile sunt beginner-friendly, concrete și orientate spre beneficiul
+  profesional pentru software development și DevOps.
+- GitHub Actions este operat atât din GitHub Web UI, cât și prin `gh` și,
+  gradual, `gh api`.
+- Debugging-ul, securitatea, costul și găsirea informației în documentația
+  oficială sunt exersate recurent.
 - Înaintea fiecărei sesiuni, asistentul explică exact ce intenționează să facă.
 - Nicio comandă, cercetare, creare sau modificare de fișiere nu începe fără
   aprobarea explicită a utilizatorului.
@@ -48,5 +57,5 @@ După finalizarea singurului task al sesiunii:
 
 ## Stare
 
-Workspace inițializat. Programa GH-200 nu a fost încă verificată și nu a fost
-creat niciun laborator.
+Programa GH-200 este documentată, iar traseul practic de studiu este stabilit.
+Evaluarea inițială și laboratoarele practice nu au început încă.
