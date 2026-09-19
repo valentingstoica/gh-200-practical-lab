@@ -24,6 +24,21 @@
   sunt necomise.
 - Aprobarea unui task sau a unei modificări nu autorizează un commit; commitul
   poate fi creat numai în urma unei cereri directe și neechivoce a utilizatorului.
+- Înainte de solicitarea aprobării pentru commit este obligatorie o retrospectivă
+  a întregii sesiuni.
+- Retrospectiva trebuie să analizeze rezultatul, verificarea, lucrurile care au
+  funcționat, explicațiile neclare, erorile, blocajele și feedbackul explicit al
+  utilizatorului.
+- Retrospectiva este analiză internă și nu trebuie prezentată integral
+  utilizatorului decât dacă acesta o solicită explicit.
+- Pe baza retrospectivei, asistentul propune schimbări concrete în fișiere și
+  explică numai concluziile necesare deciziei, fără să le aplice înaintea
+  aprobării explicite.
+- Prima prezentare a conceptelor workflow-ului a fost prea scurtă și tehnică
+  pentru nivelul beginner. După feedbackul utilizatorului, conceptele au fost
+  explicate prin modelul: eveniment, workflow, job, runner, pași și rezultat.
+- Explicațiile viitoare trebuie să construiască mai întâi un model mental simplu,
+  apoi să prezinte rolul fiecărei chei YAML și fluxul complet al execuției.
 - Utilizatorul are autoritatea finală asupra obiectivelor și deciziilor din
   workspace, în limitele de siguranță și ale capabilităților disponibile.
 - Convenția de adresare este ca asistentul să îi spună utilizatorului „boss” și
@@ -54,9 +69,19 @@
   finale.
 - Funcțiile enterprise indisponibile în mediul real vor fi tratate transparent
   prin documentație oficială și exerciții simulate, fără a pretinde execuția lor.
+- Nivelul inițial este considerat beginner, la cererea utilizatorului, fără o
+  evaluare practică separată.
+- A fost creat primul workflow minimal în
+  `.github/workflows/hello-actions.yml`.
+- Workflow-ul folosește `workflow_dispatch`, un singur job pe `ubuntu-latest`,
+  un pas care afișează un mesaj și permisiuni explicite goale.
+- Structura de bază introdusă este: `name`, `on`, `permissions`, `jobs`,
+  `runs-on` și `steps`.
 
 ## Ce nu s-a făcut
 
-- Nu a fost evaluat nivelul inițial al utilizatorului.
-- Nu a fost creat sau executat niciun workflow GitHub Actions.
-- Nu a fost creat niciun laborator practic.
+- Repository-ul local nu are încă un remote Git configurat.
+- Workflow-ul nu a fost încă publicat pe ramura implicită și executat în
+  GitHub Actions.
+- Nu au fost încă analizate pagina unei rulări, logurile jobului și rezultatul
+  fiecărui pas.

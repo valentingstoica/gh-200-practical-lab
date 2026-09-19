@@ -2,23 +2,23 @@
 
 ## Singurul task propus
 
-Evaluarea practică inițială și verificarea instrumentelor necesare laboratoarelor
-GH-200.
+Configurarea și verificarea remote-ului Git pentru repository-ul de laborator.
 
 ## Înainte de execuție
 
 Asistentul va explica:
 
-- ce competențe de bază vor fi verificate și de ce;
-- ce verificări locale, în GitHub Web UI și prin `gh` vor fi efectuate;
-- ce informații despre nivelul inițial vor fi păstrate;
+- ce este un remote Git și de ce repository-ul local are nevoie de el;
+- diferența dintre repository-ul local și repository-ul găzduit pe GitHub;
+- cum va fi identificat sau creat repository-ul GitHub potrivit;
+- cum va fi adăugat și verificat remote-ul `origin`;
 - ce fișiere intenționează să modifice;
 - care este criteriul de finalizare al sesiunii.
 
-Evaluarea va începe numai după aprobarea explicită a utilizatorului.
+Configurarea va începe numai după aprobarea explicită a utilizatorului. Niciun
+commit și niciun push nu vor fi efectuate fără cereri directe și neechivoce.
 
 ## Rezultat urmărit
 
-Un profil inițial scurt al experienței practice și confirmarea că repository-ul,
-Git, GitHub Web UI și `gh` sunt pregătite pentru laboratoare. Crearea aplicației
-și a primului workflow nu fac parte din această sesiune.
+Remote-ul `origin` indică repository-ul GitHub corect, iar conexiunea poate fi
+verificată fără publicarea modificărilor locale.

@@ -36,6 +36,27 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
   commit sau o formulare ambigua drept aprobare pentru commit. Creeaza un commit
   numai daca utilizatorul cere direct si neechivoc actiunea de commit.
 
+## Retrospectiva obligatorie
+
+- Inainte de a solicita aprobarea pentru commit, analizeaza intreaga sesiune.
+- Efectueaza retrospectiva intern, fara a prezenta utilizatorului raportul
+  complet, exceptand cazul in care acesta il solicita explicit.
+- Retrospectiva trebuie sa identifice:
+  - ce s-a realizat si cum a fost verificat;
+  - ce a functionat bine;
+  - ce explicatii, pasi sau rezultate au fost neclare pentru utilizator;
+  - ce erori ori blocaje au aparut si ce s-a invatat din ele;
+  - ce feedback explicit a oferit utilizatorul;
+  - ce trebuie adaptat in metoda de invatare si in sesiunile urmatoare.
+- Pe baza retrospectivei, propune modificarile necesare in fisierele
+  repository-ului si explica motivul fiecareia.
+- Comunica utilizatorului numai concluziile necesare: fisierele propuse,
+  motivul pe scurt si decizia pentru care este necesara aprobarea.
+- Nu aplica modificarile propuse pana cand utilizatorul nu le aproba explicit.
+- Analiza, propunerea modificarilor sau aprobarea lor nu reprezinta aprobare
+  pentru commit. Commitul necesita in continuare o cerere directa si
+  neechivoca.
+
 ## Memoria intre sesiuni
 
 - Intr-o sesiune noua, inainte de primul raspuns adresat utilizatorului, citeste
@@ -48,7 +69,8 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 - `CURRENT-STATE.md` descrie progresul, deciziile si lucrurile ramase nefacute.
 - `NEXT-SESSION.md` trebuie sa contina exact un singur task pentru sesiunea
   urmatoare.
-- Actualizeaza memoria relevanta dupa finalizarea si verificarea taskului curent.
+- Actualizeaza memoria relevanta dupa finalizarea si verificarea taskului curent,
+  inclusiv cu lectiile si adaptarile aprobate in retrospectiva.
 - Verifica starea Git inainte sa declari sesiunea finalizata.
 - Nu recomanda inchiderea sesiunii cat timp modificarile produse de task sunt
   necomise. Daca aprobarea explicita pentru commit lipseste, solicit-o mai intai.

@@ -42,20 +42,28 @@ practice, debugging și recapitulare progresivă, nu prin memorarea izolată a t
 După finalizarea singurului task al sesiunii:
 
 1. Se verifică rezultatul taskului.
-2. Se actualizează memoria relevantă.
-3. În `NEXT-SESSION.md` se păstrează exact un singur task pentru sesiunea următoare.
-4. Se verifică starea Git și se rezolvă toate modificările produse de task.
-5. Un commit se creează numai cu aprobarea explicită a utilizatorului.
+2. Se face o retrospectivă a întregii sesiuni: rezultat, verificare, lucruri
+   care au funcționat, explicații neclare, erori, blocaje, feedbackul
+   utilizatorului și adaptările necesare. Analiza este internă și nu este
+   prezentată integral decât dacă utilizatorul o solicită.
+3. Asistentul propune schimbările necesare în fișiere și explică motivul
+   fiecăreia, concis și numai cu informațiile necesare deciziei. Schimbările se
+   aplică numai după aprobarea explicită a utilizatorului.
+4. Se actualizează memoria relevantă cu lecțiile și adaptările aprobate.
+5. În `NEXT-SESSION.md` se păstrează exact un singur task pentru sesiunea următoare.
+6. Se verifică starea Git și se rezolvă toate modificările produse de task.
+7. Un commit se creează numai cu aprobarea explicită a utilizatorului.
    Aprobarea unui task, a unei modificări sau discutarea necesității unui commit
    nu reprezintă aprobare pentru commit. Utilizatorul trebuie să ceară direct
    crearea commitului.
-6. Sesiunea nu este declarată închisă cât timp modificările produse de task sunt
+8. Sesiunea nu este declarată închisă cât timp modificările produse de task sunt
    necomise; dacă lipsește aprobarea pentru commit, asistentul trebuie să o
    solicite înainte de a recomanda închiderea.
-7. Asistentul recomandă explicit închiderea sesiunii curente și continuarea
+9. Asistentul recomandă explicit închiderea sesiunii curente și continuarea
    taskului următor într-o sesiune nouă.
 
 ## Stare
 
 Programa GH-200 este documentată, iar traseul practic de studiu este stabilit.
-Evaluarea inițială și laboratoarele practice nu au început încă.
+Nivelul inițial este considerat beginner, iar primul workflow minimal a fost
+creat local.
