@@ -66,4 +66,5 @@ După finalizarea singurului task al sesiunii:
 
 Programa GH-200 este documentată, iar traseul practic de studiu este stabilit.
 Nivelul inițial este considerat beginner, primul workflow minimal a fost creat
-local, iar repository-ul public GitHub și remote-ul `origin` sunt configurate.
+și publicat, iar repository-ul public GitHub și remote-ul `origin` sunt
+configurate.

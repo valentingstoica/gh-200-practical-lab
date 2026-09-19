@@ -81,11 +81,13 @@
   `https://github.com/valentingstoica/gh-200-practical-lab`.
 - Remote-ul Git `origin` indică
   `https://github.com/valentingstoica/gh-200-practical-lab.git`.
-- Conexiunea read-only la remote a fost verificată cu succes, fără push.
+- Ramura locală `master` a fost publicată și urmărește `origin/master`.
+- Commitul local și cel remote au fost verificate și coincid.
+- Utilizatorul consideră că sesiunea nu trebuie declarată închisă înainte ca
+  modificările aprobate și comise să fie publicate pe GitHub.
 
 ## Ce nu s-a făcut
 
-- Workflow-ul nu a fost încă publicat pe ramura implicită și executat în
-  GitHub Actions.
+- Workflow-ul nu a fost încă executat în GitHub Actions.
 - Nu au fost încă analizate pagina unei rulări, logurile jobului și rezultatul
   fiecărui pas.
