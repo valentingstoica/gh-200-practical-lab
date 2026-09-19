@@ -65,5 +65,5 @@ După finalizarea singurului task al sesiunii:
 ## Stare
 
 Programa GH-200 este documentată, iar traseul practic de studiu este stabilit.
-Nivelul inițial este considerat beginner, iar primul workflow minimal a fost
-creat local.
+Nivelul inițial este considerat beginner, primul workflow minimal a fost creat
+local, iar repository-ul public GitHub și remote-ul `origin` sunt configurate.

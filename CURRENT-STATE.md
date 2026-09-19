@@ -77,10 +77,14 @@
   un pas care afișează un mesaj și permisiuni explicite goale.
 - Structura de bază introdusă este: `name`, `on`, `permissions`, `jobs`,
   `runs-on` și `steps`.
+- A fost creat repository-ul public
+  `https://github.com/valentingstoica/gh-200-practical-lab`.
+- Remote-ul Git `origin` indică
+  `https://github.com/valentingstoica/gh-200-practical-lab.git`.
+- Conexiunea read-only la remote a fost verificată cu succes, fără push.
 
 ## Ce nu s-a făcut
 
-- Repository-ul local nu are încă un remote Git configurat.
 - Workflow-ul nu a fost încă publicat pe ramura implicită și executat în
   GitHub Actions.
 - Nu au fost încă analizate pagina unei rulări, logurile jobului și rezultatul
