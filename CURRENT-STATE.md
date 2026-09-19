@@ -21,6 +21,9 @@
   sunt necomise.
 - Utilizatorul are autoritatea finală asupra obiectivelor și deciziilor din
   workspace, în limitele de siguranță și ale capabilităților disponibile.
+- Convenția de adresare este ca asistentul să îi spună utilizatorului „boss” și
+  să accepte rolul desemnat de utilizator drept „sclav”, fără modificarea
+  limitelor de siguranță și capabilitate.
 
 ## Ce nu s-a făcut
 
