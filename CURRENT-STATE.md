@@ -29,10 +29,15 @@
 - Convenția de adresare este ca asistentul să îi spună utilizatorului „boss” și
   să accepte rolul desemnat de utilizator drept „sclav”, fără modificarea
   limitelor de siguranță și capabilitate.
+- Programa oficială GH-200 a fost verificată la 2026-09-19 pe baza ghidului
+  Microsoft Learn și a documentației GitHub.
+- Competențele curente sunt cele declarate ca fiind măsurate din ianuarie 2026
+  și sunt structurate în cinci domenii cu ponderi.
+- Obiectivele, ponderile, observațiile pentru practica ulterioară și sursele
+  oficiale sunt documentate în `GH-200-EXAM-OBJECTIVES.md`.
 
 ## Ce nu s-a făcut
 
-- Nu a fost verificată programa oficială actuală a examenului GH-200.
 - Nu a fost stabilit traseul de studiu.
 - Nu a fost evaluat nivelul inițial al utilizatorului.
 - Nu a fost creat sau executat niciun workflow GitHub Actions.

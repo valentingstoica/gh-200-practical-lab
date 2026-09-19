@@ -2,23 +2,26 @@
 
 ## Singurul task propus
 
-Verificarea programei oficiale actuale a examenului GH-200.
+Stabilirea traseului practic de studiu pentru GH-200 pe baza programei
+documentate în `GH-200-EXAM-OBJECTIVES.md`.
 
 ## Înainte de execuție
 
 Asistentul va explica:
 
-- ce surse oficiale intenționează să consulte;
-- ce informații urmărește să extragă;
+- cum intenționează să transforme domeniile examenului într-o succesiune de
+  sesiuni practice;
+- ce criterii va folosi pentru ordine, prioritate și granularitate;
 - ce fișiere intenționează să creeze sau să modifice;
 - care este criteriul de finalizare al sesiunii.
 
-Cercetarea va începe numai după aprobarea explicită a utilizatorului.
+Planificarea va începe numai după aprobarea explicită a utilizatorului.
 
 ## Rezultat urmărit
 
-O reprezentare verificată și structurată a competențelor evaluate de examen, care
-va putea fi folosită ulterior pentru construirea traseului practic de studiu.
+Un traseu progresiv de sesiuni practice care acoperă toate domeniile și ponderile
+examenului, include exerciții de debugging și păstrează fiecare sesiune limitată
+la un singur task clar.
 
-Stabilirea traseului de studiu și crearea primului laborator nu fac parte din
+Evaluarea nivelului inițial și crearea primului laborator nu fac parte din
 această sesiune și vor fi tratate separat.
