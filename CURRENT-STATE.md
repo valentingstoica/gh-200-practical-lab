@@ -12,6 +12,8 @@
   pași limitați și rezultate verificabile.
 - Asistentul trebuie să explice planul înainte de orice acțiune.
 - Orice acțiune necesită aprobarea explicită a utilizatorului.
+- După încheierea unui task mic, asistentul trebuie să recomande continuarea
+  următorului task într-o sesiune nouă.
 
 ## Ce nu s-a făcut
 

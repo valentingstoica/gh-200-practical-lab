@@ -20,6 +20,17 @@ practice, debugging și recapitulare progresivă, nu prin memorarea izolată a t
 - Soluțiile nu sunt oferite imediat; se folosesc cerințe clare și indicii graduale.
 - Progresul și dificultățile vor determina ordinea exercițiilor următoare.
 
+## Închiderea unei sesiuni
+
+După finalizarea singurului task al sesiunii:
+
+1. Se verifică rezultatul taskului.
+2. Se actualizează memoria relevantă.
+3. În `NEXT-SESSION.md` se păstrează exact un singur task pentru sesiunea următoare.
+4. Un commit se creează numai cu aprobarea explicită a utilizatorului.
+5. Asistentul recomandă explicit închiderea sesiunii curente și continuarea
+   taskului următor într-o sesiune nouă.
+
 ## Stare
 
 Workspace inițializat. Programa GH-200 nu a fost încă verificată și nu a fost
