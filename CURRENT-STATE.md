@@ -59,6 +59,16 @@
   developer sau DevOps engineer.
 - Bucla preferată este: problemă reală, teorie minimă, implementare, observare,
   debugging, comparație cu producția și verificarea autonomiei.
+- Utilizatorul trebuie să execute acțiunile principale ale exercițiilor.
+  Asistentul oferă câte un pas, așteaptă rezultatul și îl explică înainte de a
+  continua.
+- Aprobarea începerii unui exercițiu nu permite asistentului să execute
+  exercițiul în locul utilizatorului.
+- Dacă apare o eroare, debugging-ul trebuie făcut împreună și folosit ca
+  oportunitate de învățare, nu rezolvat automat de asistent.
+- Un task educațional nu este finalizat doar pentru că rezultatul tehnic a fost
+  obținut; utilizatorul trebuie să practice pașii esențiali și să înțeleagă
+  rezultatul.
 - GitHub Actions va fi explorat atât prin GitHub Web UI, cât și prin `gh`, iar
   `gh api` va fi introdus gradual pentru administrare programatică.
 - Debugging-ul intenționat, securitatea, costul, performanța, citirea
@@ -85,9 +95,18 @@
 - Commitul local și cel remote au fost verificate și coincid.
 - Utilizatorul consideră că sesiunea nu trebuie declarată închisă înainte ca
   modificările aprobate și comise să fie publicate pe GitHub.
+- Workflow-ul a fost declanșat de asistent prin `gh` și a rulat cu succes, dar
+  această execuție nu a îndeplinit obiectivul didactic deoarece utilizatorul nu
+  a practicat pașii în GitHub Web UI.
+- GitHub nu indexase inițial workflow-ul, deși fișierul era publicat și valid.
+  Schimbarea numelui afișat și publicarea commitului `6581532` au determinat
+  indexarea workflow-ului.
+- Feedbackul explicit al utilizatorului este că asistentul nu trebuie să preia
+  și să execute întregul exercițiu; metoda de lucru a fost actualizată pentru a
+  păstra controlul practic la utilizator.
 
 ## Ce nu s-a făcut
 
-- Workflow-ul nu a fost încă executat în GitHub Actions.
-- Nu au fost încă analizate pagina unei rulări, logurile jobului și rezultatul
+- Utilizatorul nu a declanșat încă personal workflow-ul din GitHub Web UI.
+- Utilizatorul nu a analizat încă personal pagina rulării, jobul și logurile
   fiecărui pas.

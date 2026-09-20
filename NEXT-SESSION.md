@@ -2,23 +2,29 @@
 
 ## Singurul task propus
 
-Rularea manuală și analizarea primului workflow în GitHub Actions.
+Rularea manuală și analizarea de către utilizator a primului workflow în GitHub
+Actions Web UI.
 
 ## Înainte de execuție
 
-Asistentul va explica:
+Asistentul va prezenta modelul mental minimal, apoi va oferi câte un singur pas.
+Utilizatorul va executa fiecare acțiune în GitHub Web UI, va comunica ce observă,
+iar asistentul va explica rezultatul înainte de pasul următor.
 
-- cum funcționează evenimentul manual `workflow_dispatch`;
-- unde se pornește workflow-ul și unde se urmăresc jobul, pașii și logurile;
-- cum se diferențiază starea workflow-ului de stările jobului și pașilor;
-- ce fișiere intenționează să modifice;
-- care este criteriul de finalizare al sesiunii.
+Exercițiul va acoperi gradual:
 
-Rularea și analiza vor începe numai după aprobarea explicită a utilizatorului.
-Niciun commit și niciun push nu vor fi efectuate fără cereri directe și
-neechivoce.
+- evenimentul manual `workflow_dispatch`;
+- declanșarea workflow-ului prin butonul **Run workflow**;
+- diferența dintre workflow run, job și step;
+- deschiderea logului pasului `Print a greeting`;
+- explicarea rezultatului observat de utilizator.
+
+Asistentul nu va declanșa workflow-ul și nu va naviga în locul utilizatorului.
+Dacă apare o eroare, va opri progresia, va explica diagnosticul și va ghida
+utilizatorul fără să preia automat controlul. Niciun commit și niciun push nu
+vor fi efectuate fără cereri directe și neechivoce.
 
 ## Rezultat urmărit
 
-Primul workflow este declanșat manual, iar starea rulării, rezultatul jobului și
-logurile fiecărui pas sunt observate și explicate.
+Utilizatorul declanșează workflow-ul, găsește jobul și pasul care afișează
+mesajul, apoi explică diferența dintre workflow run, job și step.

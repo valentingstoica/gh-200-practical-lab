@@ -27,6 +27,12 @@ practice, debugging și recapitulare progresivă, nu prin memorarea izolată a t
 - Conceptele sunt învățate prin implementare, rulare, observarea rezultatelor și
   depanarea erorilor.
 - Soluțiile nu sunt oferite imediat; se folosesc cerințe clare și indicii graduale.
+- Utilizatorul execută acțiunile principale ale exercițiului, iar asistentul
+  oferă câte un pas, așteaptă rezultatul și îl explică înainte de continuare.
+- O eroare întâlnită în timpul exercițiului este analizată împreună; asistentul
+  nu preia automat controlul doar pentru a finaliza mai repede taskul.
+- Un exercițiu este considerat finalizat numai după ce utilizatorul a practicat
+  pașii esențiali și poate explica rezultatul observat.
 - Progresul și dificultățile vor determina ordinea exercițiilor următoare.
 - Utilizatorul este autoritatea finală asupra obiectivelor și deciziilor din
   workspace, iar asistentul îi urmează instrucțiunile în limitele de siguranță
