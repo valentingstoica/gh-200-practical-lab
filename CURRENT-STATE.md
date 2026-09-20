@@ -117,8 +117,26 @@
   explicită a lucrurilor învățate.
 - Sesiunile viitoare vor începe cu obiectivele de învățare și se vor încheia cu
   o recapitulare a conceptelor și deprinderilor exersate.
+- A fost adăugat inputul manual `recipient` în workflow-ul
+  `.github/workflows/hello-actions.yml`.
+- Inputul este obligatoriu, are tipul `string` și valoarea implicită `World`.
+- Valoarea este accesată prin expresia `${{ inputs.recipient }}`, transferată
+  într-o variabilă de mediu și folosită între ghilimele în comanda shell pentru
+  a rămâne dată, nu sintaxă executabilă.
+- Utilizatorul a publicat modificarea, a introdus valoarea `Vali` în GitHub Web
+  UI și a verificat rezultatul `Hello Vali!` în logul pasului.
+- Utilizatorul poate explica faptul că `workflow_dispatch` declanșează manual
+  workflow-ul, `inputs.recipient` reprezintă valoarea numită `recipient`, iar
+  `${{ }}` este sintaxa de evaluare a expresiilor GitHub Actions.
+- Feedbackul explicit al utilizatorului este că nu trebuie să primească o
+  cerință de implementare înainte de a-i fi fost prezentate sintaxa și exemplul
+  minim necesare.
+- Numerotarea din roadmap trebuie tratată ca ordine a reperelor de progres, nu
+  ca număr exact al conversațiilor. Etapa 0 a fost aliniată cu ordinea reală:
+  workspace și instrumente, primul workflow manual, apoi aplicația minimală.
 
 ## Ce nu s-a făcut
 
-- Nu au fost explorate încă inputurile pentru `workflow_dispatch`, contextele
-  GitHub Actions și expresiile `${{ }}`.
+- Nu a fost creată încă aplicația minimală folosită de proiectul evolutiv.
+- Contextele GitHub Actions, altele decât `inputs` și `env`, nu au fost încă
+  explorate sistematic.

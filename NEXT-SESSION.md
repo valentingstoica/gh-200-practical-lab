@@ -2,33 +2,23 @@
 
 ## Singurul task propus
 
-Adăugarea și utilizarea unui input manual în primul workflow pentru introducerea
-contextelor și expresiilor GitHub Actions.
+Crearea aplicației minimale care va fi folosită de proiectul evolutiv.
 
 ## Înainte de execuție
 
-Asistentul va prezenta explicit ce va învăța utilizatorul și modelul mental
-minimal, apoi va oferi câte un singur pas. Utilizatorul va executa fiecare
-acțiune, va comunica ce observă, iar asistentul va explica rezultatul înainte de
-pasul următor.
+Asistentul va explica mai întâi rolul aplicației în viitoarele pipeline-uri CI,
+sintaxa și comenzile minime necesare, apoi va oferi câte un singur pas.
+Utilizatorul va crea și va rula aplicația local, va comunica rezultatele, iar
+asistentul le va explica înainte de continuare.
 
-Exercițiul va acoperi gradual:
-
-- definirea unui input simplu pentru `workflow_dispatch`;
-- accesarea valorii prin contextul `inputs`;
-- sintaxa expresiilor `${{ }}`;
-- folosirea inputului într-o comandă `run`;
-- declanșarea manuală și verificarea valorii în loguri.
-
-La final, asistentul va prezenta explicit ce a învățat utilizatorul și va
-verifica înțelegerea printr-o explicație formulată de acesta. Asistentul nu va
-executa exercițiul în locul utilizatorului. Dacă apare o eroare, va opri
-progresia, va explica diagnosticul și va ghida utilizatorul fără să preia
-automat controlul. Niciun commit și niciun push nu vor fi efectuate fără cereri
+Exercițiul va rămâne limitat la o aplicație mică, cu o comandă de build sau
+validare și o verificare automată executabile local. Alegerea tehnologiei va
+favoriza un setup simplu și relevant pentru laboratoarele GitHub Actions.
+Asistentul nu va cere implementarea unei sintaxe înainte de a o prezenta printr-un
+exemplu minim. Niciun commit și niciun push nu vor fi efectuate fără cereri
 directe și neechivoce.
 
 ## Rezultat urmărit
 
-Utilizatorul configurează un input manual, îl furnizează din GitHub Web UI,
-verifică valoarea în loguri și explică legătura dintre `workflow_dispatch`,
-contextul `inputs` și expresia `${{ }}`.
+Utilizatorul poate executa local aplicația și verificarea ei automată și poate
+explica ce comenzi va automatiza ulterior un workflow de CI.

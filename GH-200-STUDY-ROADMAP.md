@@ -76,16 +76,17 @@ fara integrare artificiala.
 
 ## Traseul sesiunilor
 
-Numarul sesiunilor este orientativ. O sesiune poate fi impartita daca verificarea
-practica ar deveni prea mare, dar nu va combina mai multe taskuri independente.
+Numerele indica ordinea reperelor de progres, nu numarul exact al conversatiilor.
+Un reper poate fi impartit in mai multe sesiuni daca verificarea practica ar
+deveni prea mare, dar o sesiune nu va combina mai multe taskuri independente.
 
 ### Etapa 0 - Punctul de plecare
 
 | Sesiune | Task practic unic | Rezultat verificabil |
 | ---: | --- | --- |
 | 1 | Evaluarea practica initiala si verificarea instrumentelor | Profil initial al competentelor si Web UI, Git, `gh` si repository functionale |
-| 2 | Crearea aplicatiei mici folosite de proiectul evolutiv | Aplicatie cu o comanda de build si o verificare automata executabile local |
-| 3 | Crearea primului workflow manual izolat | Inputurile `workflow_dispatch` au tip, obligativitate si valoare implicita, iar schema si IntelliSense valideaza fisierul inainte ca rularea sa fie observata in Web UI si cu `gh` |
+| 2 | Crearea primului workflow manual izolat | Inputurile `workflow_dispatch` au tip, obligativitate si valoare implicita, iar valoarea este folosita printr-o expresie si verificata in logurile din Web UI |
+| 3 | Crearea aplicatiei mici folosite de proiectul evolutiv | Aplicatie cu o comanda de build si o verificare automata executabile local |
 
 ### Etapa 1 - Fundamentele workflow-urilor
 
