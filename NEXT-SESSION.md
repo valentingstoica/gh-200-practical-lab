@@ -2,29 +2,33 @@
 
 ## Singurul task propus
 
-Rularea manuală și analizarea de către utilizator a primului workflow în GitHub
-Actions Web UI.
+Adăugarea și utilizarea unui input manual în primul workflow pentru introducerea
+contextelor și expresiilor GitHub Actions.
 
 ## Înainte de execuție
 
-Asistentul va prezenta modelul mental minimal, apoi va oferi câte un singur pas.
-Utilizatorul va executa fiecare acțiune în GitHub Web UI, va comunica ce observă,
-iar asistentul va explica rezultatul înainte de pasul următor.
+Asistentul va prezenta explicit ce va învăța utilizatorul și modelul mental
+minimal, apoi va oferi câte un singur pas. Utilizatorul va executa fiecare
+acțiune, va comunica ce observă, iar asistentul va explica rezultatul înainte de
+pasul următor.
 
 Exercițiul va acoperi gradual:
 
-- evenimentul manual `workflow_dispatch`;
-- declanșarea workflow-ului prin butonul **Run workflow**;
-- diferența dintre workflow run, job și step;
-- deschiderea logului pasului `Print a greeting`;
-- explicarea rezultatului observat de utilizator.
+- definirea unui input simplu pentru `workflow_dispatch`;
+- accesarea valorii prin contextul `inputs`;
+- sintaxa expresiilor `${{ }}`;
+- folosirea inputului într-o comandă `run`;
+- declanșarea manuală și verificarea valorii în loguri.
 
-Asistentul nu va declanșa workflow-ul și nu va naviga în locul utilizatorului.
-Dacă apare o eroare, va opri progresia, va explica diagnosticul și va ghida
-utilizatorul fără să preia automat controlul. Niciun commit și niciun push nu
-vor fi efectuate fără cereri directe și neechivoce.
+La final, asistentul va prezenta explicit ce a învățat utilizatorul și va
+verifica înțelegerea printr-o explicație formulată de acesta. Asistentul nu va
+executa exercițiul în locul utilizatorului. Dacă apare o eroare, va opri
+progresia, va explica diagnosticul și va ghida utilizatorul fără să preia
+automat controlul. Niciun commit și niciun push nu vor fi efectuate fără cereri
+directe și neechivoce.
 
 ## Rezultat urmărit
 
-Utilizatorul declanșează workflow-ul, găsește jobul și pasul care afișează
-mesajul, apoi explică diferența dintre workflow run, job și step.
+Utilizatorul configurează un input manual, îl furnizează din GitHub Web UI,
+verifică valoarea în loguri și explică legătura dintre `workflow_dispatch`,
+contextul `inputs` și expresia `${{ }}`.

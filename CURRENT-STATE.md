@@ -104,9 +104,21 @@
 - Feedbackul explicit al utilizatorului este că asistentul nu trebuie să preia
   și să execute întregul exercițiu; metoda de lucru a fost actualizată pentru a
   păstra controlul practic la utilizator.
+- Utilizatorul a declanșat personal workflow-ul din GitHub Web UI prin
+  `workflow_dispatch`.
+- Utilizatorul a identificat rularea `Hello GitHub Actions Lab #2`, jobul
+  `say-hello` și pasul `Print a greeting`.
+- Utilizatorul a deschis logul pasului și a verificat rezultatul
+  `Hello from GitHub Actions!`.
+- Utilizatorul poate explica ierarhia observată: un workflow run este o execuție
+  concretă a definiției workflow, conține joburi, iar fiecare job conține pași.
+- Feedbackul explicit al utilizatorului este că, la începutul fiecărui exercițiu,
+  dorește să afle clar ce urmează să învețe, iar la final dorește o sinteză
+  explicită a lucrurilor învățate.
+- Sesiunile viitoare vor începe cu obiectivele de învățare și se vor încheia cu
+  o recapitulare a conceptelor și deprinderilor exersate.
 
 ## Ce nu s-a făcut
 
-- Utilizatorul nu a declanșat încă personal workflow-ul din GitHub Web UI.
-- Utilizatorul nu a analizat încă personal pagina rulării, jobul și logurile
-  fiecărui pas.
+- Nu au fost explorate încă inputurile pentru `workflow_dispatch`, contextele
+  GitHub Actions și expresiile `${{ }}`.
