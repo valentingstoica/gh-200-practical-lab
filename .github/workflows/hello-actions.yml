@@ -2,6 +2,12 @@ name: Hello GitHub Actions Lab
 
 on:
   workflow_dispatch:
+    inputs:
+      recipient:
+        description: "Who should be greeted?"
+        required: true
+        type: string
+        default: "World"
 
 permissions: {}
 
@@ -11,4 +17,6 @@ jobs:
 
     steps:
       - name: Print a greeting
-        run: echo "Hello from GitHub Actions!"
+        env:
+          RECIPIENT: ${{ inputs.recipient }}
+        run: echo "Hello $RECIPIENT!"
