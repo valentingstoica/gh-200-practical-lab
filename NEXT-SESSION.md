@@ -2,23 +2,23 @@
 
 ## Singurul task propus
 
-Crearea aplicației minimale care va fi folosită de proiectul evolutiv.
+Automatizarea validării aplicației pentru evenimentele `push` și
+`pull_request`.
 
 ## Înainte de execuție
 
-Asistentul va explica mai întâi rolul aplicației în viitoarele pipeline-uri CI,
-sintaxa și comenzile minime necesare, apoi va oferi câte un singur pas.
-Utilizatorul va crea și va rula aplicația local, va comunica rezultatele, iar
-asistentul le va explica înainte de continuare.
+Asistentul va explica mai întâi modelul mental al integrării continue, diferența
+dintre evenimentele `push` și `pull_request`, filtrele de branch și permisiunile
+minime. Sintaxa YAML necesară va fi prezentată printr-un exemplu minim înaintea
+implementării.
 
-Exercițiul va rămâne limitat la o aplicație mică, cu o comandă de build sau
-validare și o verificare automată executabile local. Alegerea tehnologiei va
-favoriza un setup simplu și relevant pentru laboratoarele GitHub Actions.
-Asistentul nu va cere implementarea unei sintaxe înainte de a o prezenta printr-un
-exemplu minim. Niciun commit și niciun push nu vor fi efectuate fără cereri
-directe și neechivoce.
+Utilizatorul va construi workflow-ul pas cu pas, va crea branch-ul și
+pull request-ul necesare exercițiului și va observa rulările în GitHub Web UI.
+Asistentul va oferi câte un singur pas și va explica rezultatul înainte de
+continuare. Niciun commit și niciun push nu vor fi efectuate de asistent fără
+cereri directe și neechivoce.
 
 ## Rezultat urmărit
 
-Utilizatorul poate executa local aplicația și verificarea ei automată și poate
-explica ce comenzi va automatiza ulterior un workflow de CI.
+Validarea `npm test` rulează automat pentru un push pe branch-ul configurat și
+pentru un pull request, cu scope și permisiuni minime explicate de utilizator.

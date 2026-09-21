@@ -134,9 +134,28 @@
 - Numerotarea din roadmap trebuie tratată ca ordine a reperelor de progres, nu
   ca număr exact al conversațiilor. Etapa 0 a fost aliniată cu ordinea reală:
   workspace și instrumente, primul workflow manual, apoi aplicația minimală.
+- A fost creată aplicația Node.js minimală folosită de proiectul evolutiv.
+- `package.json` definește scripturile `npm start` pentru rularea aplicației și
+  `npm test` pentru verificarea automată.
+- `index.js` exportă funcția `createGreeting` și afișează mesajul
+  `Hello, GitHub Actions!` când este executat direct.
+- `index.test.js` folosește test runner-ul integrat `node:test` și
+  `node:assert/strict` pentru a verifica rezultatul funcției.
+- Utilizatorul a inițializat proiectul cu `npm init -y`, a observat eșecul
+  intenționat al scriptului de test implicit și a verificat codul de ieșire `1`.
+- Utilizatorul a rulat cu succes aplicația prin `npm start` și testul prin
+  `npm test`; verificarea finală a raportat `pass 1` și `fail 0`.
+- Utilizatorul înțelege la nivel de bază că testul există pentru a verifica
+  automat comportamentul și că GitHub Actions trebuie să îl execute pentru a
+  detecta regresiile.
+- A fost clarificată diferența dintre `package.json`, care este fișierul-manifest
+  al proiectului, și npm, care este utilitarul ce citește manifestul și execută
+  scripturile definite în el.
+- La cererea explicită a utilizatorului, asistentul a creat fișierele
+  `index.js` și `index.test.js`; utilizatorul a păstrat partea practică de
+  inițializare și rulare a comenzilor.
 
 ## Ce nu s-a făcut
 
-- Nu a fost creată încă aplicația minimală folosită de proiectul evolutiv.
 - Contextele GitHub Actions, altele decât `inputs` și `env`, nu au fost încă
   explorate sistematic.

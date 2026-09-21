@@ -1,0 +1,22 @@
+{
+  "name": "gh-200-practical-lab",
+  "version": "1.0.0",
+  "description": "Acest workspace este memoria persistentă pentru pregătirea practică a examenului\r GitHub Actions GH-200.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentingstoica/gh-200-practical-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/valentingstoica/gh-200-practical-lab/issues"
+  },
+  "homepage": "https://github.com/valentingstoica/gh-200-practical-lab#readme"
+}
