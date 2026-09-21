@@ -1,4 +1,4 @@
-# GH-200 Practical Lab 
+# GH-200 Practical Lab
 
 Acest workspace este memoria persistentă pentru pregătirea practică a examenului
 GitHub Actions GH-200.
@@ -74,3 +74,9 @@ Programa GH-200 este documentată, iar traseul practic de studiu este stabilit.
 Nivelul inițial este considerat beginner, primul workflow minimal a fost creat
 și publicat, iar repository-ul public GitHub și remote-ul `origin` sunt
 configurate.
+
+Aplicația Node.js minimală există, împreună cu testul ei automat. Workflow-ul de
+integrare continuă `.github/workflows/ci.yml` rulează `npm test` la `push` pe
+`master` și la `pull_request` către `master`, cu permisiuni minime. Fluxul a fost
+verificat practic printr-un branch, un pull request și un merge, observând cele
+trei rulări rezultate.

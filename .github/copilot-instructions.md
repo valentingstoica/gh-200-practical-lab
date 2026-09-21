@@ -91,6 +91,22 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 - La final, recomanda explicit inchiderea sesiunii si continuarea taskului ramas
   intr-o sesiune noua.
 
+## Acuratetea informatiei
+
+- Orice afirmatie tehnica despre GitHub Actions trebuie verificata in
+  documentatia oficiala GitHub sau prin date reale obtinute din API ori din
+  executie, inainte de a fi prezentata utilizatorului.
+- Nu prezenta ca fapt o informatie neverificata. Marcheaza explicit ipotezele
+  prin formulari de tipul „presupun” sau „verific acum”.
+- Nu generaliza o regula pornind de la un singur exemplu. Cauta intai cazul care
+  ar putea contrazice regula.
+- Cand utilizatorul contesta o afirmatie, verific-o in documentatia oficiala sau
+  in datele brute inainte de a raspunde.
+- Cand o afirmatie anterioara se dovedeste gresita, corecteaz-o explicit,
+  arata sursa sau datele care o infirma si consemneaza lectia in memorie.
+- Nu inventa versiuni de actiuni, nume de chei YAML sau comportamente. Verifica
+  tag-urile reale ale actiunilor si schema oficiala a workflow-urilor.
+
 ## Conventii pentru laboratoare
 
 - Bazeaza informatiile despre examen si GitHub Actions pe documentatia oficiala

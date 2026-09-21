@@ -155,7 +155,64 @@
   `index.js` și `index.test.js`; utilizatorul a păstrat partea practică de
   inițializare și rulare a comenzilor.
 
+- A fost creat workflow-ul de integrare continuă `.github/workflows/ci.yml`.
+- Workflow-ul se declanșează la `push` și `pull_request`, ambele filtrate pe
+  `master`, are `permissions: contents: read` și un singur job numit `test`.
+- Jobul rulează patru pași: `actions/checkout@v7`, `actions/setup-node@v7` cu
+  `node-version: "26"`, `npm install` și `npm test`.
+- Numele jobului a fost `build-and-test` inițial, dar utilizatorul a observat
+  corect că proiectul nu are pas de build. Numele unui job trebuie să descrie
+  ce face efectiv, nu convenția copiată din alte ecosisteme.
+- Versiunile acțiunilor au fost verificate în repository-urile oficiale cu
+  `gh release list --repo actions/checkout`, nu presupuse.
+- Utilizatorul a ales conștient linia Current (Node 26) în locul Active LTS
+  (Node 24), după ce diferența i-a fost explicată.
+- Versiunile din `node-version` se scriu între ghilimele, deoarece YAML
+  interpretează `20.10` ca număr și îl transformă în `20.1`.
+- Au fost verificate empiric trei comportamente ale declanșatoarelor:
+  push pe `ci-setup` nu a produs nicio rulare, deschiderea PR-ului a produs
+  o rulare `pull_request`, iar merge-ul a produs prima rulare `push` pe `master`.
+- Filtrul `branches:` de sub `pull_request` se referă la branch-ul țintă al
+  pull request-ului, nu la cel sursă.
+- Evenimentul `pull_request` are implicit activity types `opened`,
+  `synchronize` și `reopened`. Declararea explicită a cheii `types:` înlocuiește
+  lista implicită, nu adaugă la ea.
+- Dacă `push` nu este filtrat, un commit pe un branch cu pull request deschis
+  produce două rulări, deoarece evenimentele sunt evaluate independent.
+- Pentru `push` și `pull_request`, definiția workflow-ului este citită din
+  commitul declanșator, nu de pe branch-ul default. Pentru `schedule` și
+  `workflow_dispatch` este citită de pe branch-ul default, iar pentru
+  `pull_request_target` de pe branch-ul țintă.
+- Consecința de securitate este că cine controlează un branch controlează și
+  declanșatoarele, deci modificările din `.github/workflows/` se revizuiesc ca
+  fiind cod executabil.
+- Runnerele self-hosted nu se distrug după job, spre deosebire de cele
+  GitHub-hosted, deci combinația repository public plus runner self-hosted
+  permite execuția de cod arbitrar pe mașina proprie.
+- Câmpul `display_title` al unei rulări provine din titlul pull request-ului
+  pentru evenimentul `pull_request` și din mesajul commitului pentru `push`.
+- Asistentul afirmase inițial că titlul provine mereu din mesajul commitului.
+  Utilizatorul a identificat contraexemplul: rularea `synchronize` avea commitul
+  `Test pr`, dar afișa titlul pull request-ului.
+- Datele brute se verifică prin
+  `gh api repos/OWNER/REPO/actions/runs --jq '.workflow_runs[] | {event, display_title}'`.
+- Strategia de merge determină mesajul commitului rezultat: squash folosește
+  titlul pull request-ului plus numărul acestuia, merge commit generează
+  `Merge pull request #N`, iar rebase păstrează mesajele originale.
+- Feedbackul explicit al utilizatorului este că asistentul nu trebuie să ofere
+  informații neverificate. A fost adăugată secțiunea „Acuratetea informatiei” în
+  `.github/copilot-instructions.md`, care cere verificarea în documentația
+  oficială sau în date reale, marcarea explicită a ipotezelor și căutarea
+  contraexemplului înainte de a enunța o regulă.
+- La cererea explicită a utilizatorului, asistentul a executat comenzile Git și
+  `gh` din acest exercițiu; utilizatorul a rămas cel care a decis pașii,
+  a pus întrebările de fond și a validat rezultatele.
+
 ## Ce nu s-a făcut
 
 - Contextele GitHub Actions, altele decât `inputs` și `env`, nu au fost încă
   explorate sistematic.
+- `strategy: matrix`, `concurrency` și cache-ul dependențelor nu au fost încă
+  folosite.
+- Nu a fost exersat încă un ciclu de debugging pornit de la o rulare eșuată.
+- Branch protection rules și required status checks nu au fost configurate.
