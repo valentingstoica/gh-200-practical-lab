@@ -1,4 +1,4 @@
-# GH-200 Practical Lab
+# GH-200 Practical Lab 
 
 Acest workspace este memoria persistentă pentru pregătirea practică a examenului
 GitHub Actions GH-200.
