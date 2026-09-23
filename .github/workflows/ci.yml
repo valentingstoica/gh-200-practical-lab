@@ -25,3 +25,9 @@ jobs:
               run: npm install
             - name: Run tests
               run: npm test
+    vv:
+        runs-on: ubuntu-latest
+        needs: test
+        steps:
+            - name: vv1
+              run: echo "Vali is awesome!"
