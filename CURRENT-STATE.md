@@ -207,6 +207,29 @@
 - La cererea explicită a utilizatorului, asistentul a executat comenzile Git și
   `gh` din acest exercițiu; utilizatorul a rămas cel care a decis pașii,
   a pus întrebările de fond și a validat rezultatele.
+- Sesiunea 5 a adăugat jobul `vv` în `.github/workflows/ci.yml`, cu
+  `needs: test`, `runs-on: ubuntu-latest` și un pas care afișează un mesaj.
+  Utilizatorul a scris jobul; asistentul a creat branch-ul, commitul și PR #2
+  numai după cererea și aprobarea explicite ale utilizatorului.
+- În prima rulare a PR #2, `test` și `vv` au trecut. Utilizatorul a observat
+  în graful din GitHub Web UI că `vv` începe după încheierea lui `test`.
+  Pașii aceluiași job rulează în ordine pe același runner; joburile fără
+  dependențe pot rula în paralel, pe runnere separate, iar `needs` impune
+  ordinea și succesul jobului precedent.
+- Utilizatorul a introdus intenționat un spațiu final în valoarea așteptată
+  din `index.test.js`. `npm test` local a raportat un test eșuat:
+  `actual: 'Hello, Vali!'`, `expected: 'Hello, Vali! '`.
+  Rularea PR a arătat `test: FAILURE` și `vv: SKIPPED`. Logul pasului
+  `Run tests` a indicat assertion error și exit code 1.
+- După eliminarea spațiului, testul local a trecut și ambele joburi au fost
+  verzi în PR. Utilizatorul a făcut merge la PR #2; rularea rezultată pe
+  `master`, declanșată de evenimentul `push`, a trecut. Rulările anterioare
+  din PR aveau evenimentul `pull_request`.
+- Feedbackul utilizatorului: întrebările se pun în chat, nu în formulare
+  interactive; înainte de o modificare, sintaxa și exemplul minim trebuie
+  explicate clar. Utilizatorul nu dorește să raporteze manual stările
+  accesibile prin GitHub: asistentul le verifică singur, iar utilizatorul
+  păstrează pașii practici ai exercițiului.
 
 ## Ce nu s-a făcut
 
@@ -214,9 +237,6 @@
   explorate sistematic.
 - `strategy: matrix`, `concurrency` și cache-ul dependențelor nu au fost încă
   folosite.
-- Nu a fost exersat încă un ciclu de debugging pornit de la o rulare eșuată.
-  Acesta va fi exersat în interiorul sesiunii 5, prin propagarea unui eșec
-  între joburi legate cu `needs`.
 - Branch protection rules și required status checks nu au fost configurate.
 
 ## Lecție despre metoda de lucru
