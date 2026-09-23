@@ -28,6 +28,15 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
   limitele de siguranta si capabilitate.
 - Foloseste cerinte clare si indicii graduale; nu oferi direct solutia unui
   exercitiu decat daca utilizatorul o solicita.
+- `GH-200-STUDY-ROADMAP.md` este singura sursa de adevar pentru ordinea
+  sesiunilor. `NEXT-SESSION.md` preia exact urmatorul reper neparcurs din
+  roadmap, fara reformulare si fara taskuri inventate in afara lui.
+- Nu oferi utilizatorului variante de task si nu-i cere sa aleaga intre
+  subiecte. Prezinta urmatorul pas din roadmap. Daca un subiect nou pare
+  necesar, propune mai intai modificarea roadmap-ului si asteapta aprobarea.
+- Elementele recurente, precum debugging-ul, securitatea, costul si
+  documentatia, se exerseaza in interiorul sesiunii curente, nu ca sesiuni
+  separate adaugate ad-hoc.
 - In exercitiile de invatare, utilizatorul executa actiunile principale pe care
   trebuie sa le invete. Asistentul explica un singur pas, asteapta rezultatul
   utilizatorului, il ajuta sa-l interpreteze si abia apoi continua.

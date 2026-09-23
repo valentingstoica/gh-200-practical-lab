@@ -215,4 +215,23 @@
 - `strategy: matrix`, `concurrency` și cache-ul dependențelor nu au fost încă
   folosite.
 - Nu a fost exersat încă un ciclu de debugging pornit de la o rulare eșuată.
+  Acesta va fi exersat în interiorul sesiunii 5, prin propagarea unui eșec
+  între joburi legate cu `needs`.
 - Branch protection rules și required status checks nu au fost configurate.
+
+## Lecție despre metoda de lucru
+
+- Asistentul i-a oferit utilizatorului variante de task în afara roadmap-ului,
+  iar `NEXT-SESSION.md` a ajuns să conțină un task inexistent în
+  `GH-200-STUDY-ROADMAP.md`. Au rezultat două surse de adevăr contradictorii și
+  confuzie privind poziția reală în traseu.
+- Utilizatorul a semnalat explicit că roadmap-ul trebuie să fie un drum drept,
+  parcurs pas cu pas.
+- Regula stabilită: `GH-200-STUDY-ROADMAP.md` este singura sursă de adevăr
+  pentru ordinea sesiunilor, iar `NEXT-SESSION.md` preia exact următorul reper
+  neparcurs. Asistentul nu mai oferă variante de ales. Un subiect nou intră în
+  traseu numai printr-o modificare aprobată a roadmap-ului.
+- Elementele recurente, precum debugging-ul, se exersează în interiorul
+  sesiunii curente, nu ca sesiuni separate adăugate ad-hoc.
+- Poziția reală confirmată: sesiunile 1-4 sunt finalizate, iar următorul reper
+  este sesiunea 5, `steps`, `jobs` și `needs`.
