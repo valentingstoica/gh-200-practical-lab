@@ -77,4 +77,4 @@ jobs:
               env:
                   JOB_TOTAL: ${{ strategy.job-total }}
               run: |
-                  echo: "JOB_TOTAL: $JOB_TOTAL"
+                  echo "JOB_TOTAL: $JOB_TOTAL"
