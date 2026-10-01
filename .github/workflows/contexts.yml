@@ -4,8 +4,12 @@ on: workflow_dispatch
 
 permissions: {}
 
+env:
+    COLOR: red
+
 jobs:
-    "show_github_actor":
+    job_id:
+        name: Job Id
         runs-on: ubuntu-latest
 
         steps:
@@ -14,10 +18,14 @@ jobs:
                   ACTOR: ${{ github.actor }}
               run: |
                   echo "$ACTOR"
-            - name: "Show Runner Info"
+                  echo "$COLOR"
+
+            - name: Show Runner Info
               env:
                   OS: ${{ runner.os }}
                   NAME: ${{ runner.name }}
+                  COLOR: blue
               run: |
                   echo "OS: $OS"
                   echo "Runner Name: $NAME"
+                  echo "COLOR: $COLOR"
