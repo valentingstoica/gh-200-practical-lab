@@ -35,3 +35,9 @@ jobs:
                   APP_ENV: ${{ vars.APP_ENV }}
               run: |
                   echo "APP_ENV: $APP_ENV"
+
+            - name: Show secret
+              env:
+                  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+              run: |
+                  echo "DB_PASSWORD: $DB_PASSWORD"
