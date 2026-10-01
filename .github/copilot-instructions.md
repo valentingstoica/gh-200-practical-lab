@@ -49,6 +49,16 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
   rezultat reusit.
 - Considera un exercitiu finalizat numai dupa ce utilizatorul a executat sau a
   explicat pasii esentiali si a demonstrat ca intelege rezultatul observat.
+- Aplica procedura generala de invatare din `LEARNING-METHOD.md`: harta
+  cunostintelor este adevarul suprem; roadmap-ul, metodele si didactica se
+  construiesc dupa harta; Anki doar oglindeste harta 1 la 1, pentru
+  stabilizarea memoriei, fara ghicitori sau intrebari de tip examen.
+- Explica pornind de la ceva deja practicat de utilizator, introdu o singura
+  idee pe rand si incheie cu o intrebare simpla de verificare. O explicatie
+  densa, cu multe concepte deodata, a fost prea greu de urmarit.
+- Cardurile Anki se scriu in engleza, in formatul descris in
+  `LEARNING-METHOD.md`, si se propun utilizatorului pentru revizuire inainte de
+  import.
 - Verifica practic rezultatul fiecarui task.
 - Pastreaza modificarile concentrate pe obiectivul sesiunii si evita lucrul
   suplimentar care apartine unei sesiuni viitoare.
@@ -81,9 +91,10 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
 ## Memoria intre sesiuni
 
 - Intr-o sesiune noua, inainte de primul raspuns adresat utilizatorului, citeste
-  integral fisierele `README.md`, `CURRENT-STATE.md` si `NEXT-SESSION.md`, pentru
-  a cunoaste scopul, starea curenta si taskul planificat.
-- Citirea initiala obligatorie a acestor trei fisiere este exceptata de la
+  integral fisierele `README.md`, `LEARNING-METHOD.md`, `CURRENT-STATE.md` si
+  `NEXT-SESSION.md`, pentru a cunoaste scopul, metoda de invatare, starea
+  curenta si taskul planificat.
+- Citirea initiala obligatorie a acestor patru fisiere este exceptata de la
   cerinta de a explica planul si de a obtine aprobarea in prealabil. Nu raspunde
   utilizatorului si nu incepe nicio alta actiune pana cand citirea nu este
   finalizata.

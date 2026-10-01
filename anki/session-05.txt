@@ -1,0 +1,10 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags:gh-200 session-05
+How do steps within the same job run?	Sequentially, on the same runner.
+How do jobs without dependencies run?	In parallel, each on a separate runner.
+What does <code>needs: test</code> do?	The job waits for <code>test</code> and runs only if <code>test</code> succeeded.
+If a job listed in <code>needs</code> fails, what happens to the dependent job by default?	It is skipped.
+Where can you see the order of jobs defined by <code>needs</code>?	In the run graph in the GitHub Web UI.

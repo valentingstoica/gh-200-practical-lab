@@ -230,13 +230,72 @@
   explicate clar. Utilizatorul nu dorește să raporteze manual stările
   accesibile prin GitHub: asistentul le verifică singur, iar utilizatorul
   păstrează pașii practici ai exercițiului.
+- În sesiunea 6, utilizatorul a cerut două adaptări ale metodei: învățarea
+  `gh` CLI în paralel cu Web UI, prin repetarea fiecărei verificări din UI cu
+  comanda `gh` echivalentă, și carduri Anki în engleză la finalul fiecărei
+  sesiuni. Au fost evaluate skill-ul `crisak/anki-connect-skill` și serverul
+  `timKnudsen/anki-mcp`; ambele cer Anki desktop pornit cu AnkiConnect și cod
+  de la terți. S-a ales importul text nativ al Anki (anteturi `#separator`,
+  `#deck`, `#notetype`, `#tags`, disponibile din Anki 2.1.54), fără
+  dependențe externe, cu fișiere versionate în `anki/`.
+- După primele comenzi `gh run list`, `gh run view` și
+  `gh run view --job --log`, utilizatorul a decis că CLI este prea complicat
+  pentru nevoile lui și rămâne la Web UI. Regula de verificare paralelă UI + CLI
+  a fost retrasă, iar recapitularea CLI a sesiunilor 1–5 a fost anulată.
+  Competențele REST API cerute de examen (loguri, artifacts, runs, secrets,
+  variables) rămân numai în sesiunile dedicate din roadmap, la nivelul
+  examenului.
+- Sesiunea 6 a creat `.github/workflows/contexts.yml` (`workflow_dispatch`,
+  `permissions: {}`), scris de utilizator pas cu pas și rulat din Web UI.
+  Au fost practicate contextele `github` (`github.actor`), `runner`
+  (`runner.os`, `runner.name`), `env` pe nivel de workflow și pas,
+  `vars` (`APP_ENV=staging`), `secrets` (`DB_PASSWORD`, valoare de test),
+  `needs` (`needs.show_context.result`), `matrix` și `strategy` (matrice
+  `ubuntu-latest` / `windows-latest`, `strategy.job-index`,
+  `strategy.job-total`), `steps` (`steps.<id>.outcome`) și `job`
+  (`job.status`). `inputs` fusese practicat în sesiunea 2.
+- Utilizatorul înțelege că `${{ }}` este înlocuit de GitHub înainte ca shell-ul
+  să ruleze, iar `$VAR` este înlocuit de shell; logul arată valoarea deja
+  substituită în blocul `env`. Înțelege că tiparul `env` + `run` previne script
+  injection și că riscul depinde de cine controlează valoarea.
+- Erori întâlnite și remediate de utilizator: `: ` într-un scalar YAML simplu
+  (`mapping values are not allowed here`), rezolvat cu blocul `|`; `\n`
+  afișat literal, deoarece `echo` din bash nu interpretează escape-urile fără
+  `-e`; `runs-on: ${{ strategy.matrix.os }}` a făcut ca jobul matrix să nu fie
+  creat deloc, iar rularea să fie `failure`, corect fiind `matrix.os`;
+  `echo:` în loc de `echo`; pe Windows shell-ul implicit este `pwsh`, unde
+  `$VAR` nu citește variabila de mediu (`$env:VAR`), rezolvat cu
+  `defaults.run.shell: bash` la nivel de job.
+- Utilizatorul a scris o valoare de test a secretului direct în YAML (commitul
+  `7e9d32a`). Valoarea este publică în istoricul Git; fiind inventată, nu are
+  impact, dar în producție secretul ar fi considerat compromis și rotit.
+- Întrebări valoroase ale utilizatorului: dacă mascarea poate fi folosită ca
+  oracol pentru ghicirea parolei (răspuns: cine poate rula workflow-ul are
+  deja acces de citire la secrete, iar fork-urile nu primesc secrete) și de ce
+  `job.status` este `success`, nu `in_progress` (valorile documentate sunt doar
+  `success`, `failure`, `cancelled`).
+- Feedback pedagogic: o primă explicație cu multe contexte și reguli deodată
+  a fost respinsă („Nu înțeleg nimic”). A funcționat pornirea de la ceva deja
+  practicat (`inputs.recipient` din sesiunea 2), analogia „sertarelor”, o
+  singură idee pe rând și o întrebare simplă de verificare.
+- Utilizatorul a stabilit procedura generală de învățare, documentată în
+  `LEARNING-METHOD.md`: harta cunoștințelor este adevărul suprem, roadmap-ul
+  și didactica urmează harta, iar Anki oglindește harta 1 la 1 doar pentru
+  stabilizarea memoriei, fără ghicitori sau întrebări de tip examen. Cardurile
+  sunt în engleză. A fost adăugat reperul 6b în roadmap pentru construirea
+  hărții GH-200.
+- Au fost generate 58 de carduri provizorii în `anki/session-01.txt` …
+  `anki/session-06.txt`, înaintea existenței hărții. Ele trebuie aliniate cu
+  harta în reperul 6b și nu au fost încă importate.
 
 ## Ce nu s-a făcut
 
-- Contextele GitHub Actions, altele decât `inputs` și `env`, nu au fost încă
-  explorate sistematic.
-- `strategy: matrix`, `concurrency` și cache-ul dependențelor nu au fost încă
-  folosite.
+- Harta cunoștințelor GH-200 (`GH-200-KNOWLEDGE-MAP.md`) nu există încă.
+- Cardurile Anki provizorii nu sunt aliniate cu harta și nu au fost importate.
+- Contextele au fost practicate la nivel de bază; condițiile `if` cu
+  `always()` / `failure()` aparțin sesiunii 8, iar opțiunile avansate ale
+  matricei (`include`, `exclude`, `fail-fast`, `max-parallel`) sesiunii 10.
+- `concurrency` și cache-ul dependențelor nu au fost încă folosite.
 - Branch protection rules și required status checks nu au fost configurate.
 
 ## Lecție despre metoda de lucru
@@ -253,5 +312,5 @@
   traseu numai printr-o modificare aprobată a roadmap-ului.
 - Elementele recurente, precum debugging-ul, se exersează în interiorul
   sesiunii curente, nu ca sesiuni separate adăugate ad-hoc.
-- Poziția reală confirmată: sesiunile 1-4 sunt finalizate, iar următorul reper
-  este sesiunea 5, `steps`, `jobs` și `needs`.
+- Poziția reală confirmată: sesiunile 1-6 sunt finalizate, iar următorul reper
+  este 6b, construirea hărții cunoștințelor GH-200.

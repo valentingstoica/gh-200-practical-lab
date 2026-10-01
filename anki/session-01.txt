@@ -1,0 +1,10 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags:gh-200 session-01
+What are the main top-level keys of a minimal workflow file?	<code>name</code>, <code>on</code>, <code>permissions</code>, <code>jobs</code>; each job has <code>runs-on</code> and <code>steps</code>.
+Where must workflow files be stored in a repository?	In the <code>.github/workflows/</code> directory, as <code>.yml</code> or <code>.yaml</code> files.
+What is the hierarchy of a workflow run?	A workflow run is one concrete execution of a workflow. It contains jobs, and each job contains steps.
+What does <code>permissions: {}</code> do at workflow level?	Grants the <code>GITHUB_TOKEN</code> no explicit scopes (least privilege). The log still shows <code>Metadata: read</code>.
+What does <code>runs-on: ubuntu-latest</code> specify?	The runner (machine type) for the job: a GitHub-hosted Ubuntu virtual machine.

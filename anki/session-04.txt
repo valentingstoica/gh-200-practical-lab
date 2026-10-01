@@ -1,0 +1,16 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags:gh-200 session-04
+For <code>pull_request</code>, what does the <code>branches</code> filter match?	The target (base) branch of the pull request, not the source branch.
+What are the default activity types of <code>pull_request</code>?	<code>opened</code>, <code>synchronize</code>, <code>reopened</code>.
+What happens if you declare <code>types:</code> explicitly for <code>pull_request</code>?	It replaces the default activity types list; it does not add to it.
+Why can an unfiltered <code>push</code> plus <code>pull_request</code> produce two runs for one commit?	Each event is evaluated independently; a commit on a branch with an open PR triggers both.
+For <code>push</code> and <code>pull_request</code>, where is the workflow definition read from?	From the triggering commit, not from the default branch.
+For <code>schedule</code> and <code>workflow_dispatch</code>, where is the workflow definition read from?	From the default branch.
+Where is the workflow definition read from for <code>pull_request_target</code>?	From the target (base) branch of the pull request.
+Why must changes in <code>.github/workflows/</code> be reviewed like executable code?	Whoever controls a branch controls the workflow triggered from it and the code it runs.
+Why is a public repository plus a self-hosted runner dangerous?	Self-hosted runners are not destroyed after the job, so untrusted code can run on and persist on your machine.
+What is the <code>display_title</code> of a run for <code>pull_request</code> vs <code>push</code>?	<code>pull_request</code>: the PR title. <code>push</code>: the commit message.
+Why quote <code>node-version: "20.10"</code> in YAML?	Unquoted, YAML parses it as the number 20.1.

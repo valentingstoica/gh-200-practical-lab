@@ -27,6 +27,7 @@ aceasta bucla:
 7. Comparam varianta minima cu o varianta potrivita pentru productie.
 8. Notam simptomul, cauza, metoda de diagnostic si remedierea.
 9. Verificam intelegerea printr-o schimbare mica realizata cu mai putin ajutor.
+10. Actualizam cardurile Anki care oglindesc elementele hartii predate.
 
 Nu toate aceste etape trebuie fortate intr-o singura sesiune. Taskul ramane mic,
 iar un concept dificil poate primi un laborator suplimentar inainte de avansare.
@@ -66,11 +67,11 @@ fara integrare artificiala.
 
 - Folosim GitHub Web UI pentru grafuri de joburi, logs, annotations, summaries,
   artifacts, environments, approvals, secrets, variables si setari.
-- Folosim `gh` pentru workflow runs, logs, reruns, artifacts, pull requests,
-  checks si operare repetabila.
-- Folosim gradual `gh api` pentru operatii REST care nu au o comanda dedicata.
-- Cand este relevant, realizam aceeasi investigatie prin Web UI si CLI si
-  comparam viteza, vizibilitatea si posibilitatea de automatizare.
+- GitHub Web UI este instrumentul principal, la alegerea utilizatorului.
+- `gh` si `gh api` sunt folosite numai in sesiunile dedicate competentelor
+  REST API cerute de examen (de exemplu 16 si 40), la nivelul examenului.
+- Cardurile Anki oglindesc 1 la 1 harta cunostintelor, conform
+  `LEARNING-METHOD.md`.
 - Exersam gasirea informatiei in documentatia oficiala GitHub, nu memorarea
   izolata a sintaxei.
 
@@ -95,6 +96,7 @@ deveni prea mare, dar o sesiune nu va combina mai multe taskuri independente.
 | 4 | Automatizarea validarii pentru push si pull request | Evenimentele, filtrele, scope-ul si permisiunile sunt demonstrate pe branch si PR |
 | 5 | Modelarea pipeline-ului cu steps, jobs si `needs` | Ordinea executiei si propagarea unui esec sunt vizibile in graful rularii |
 | 6 | Folosirea contextelor, expresiilor si variabilelor de mediu | Contextele `github`, `runner`, `env`, `vars`, `secrets`, `inputs`, `matrix`, `needs`, `strategy`, `job` si `steps` sunt evaluate static sau runtime, la momentul corect si fara expunerea datelor sensibile |
+| 6b | Construirea hartii cunostintelor GH-200 | `GH-200-KNOWLEDGE-MAP.md` contine, din programa oficiala, toate elementele de teorie si practica, cu ID-uri stabile; elementele parcurse in sesiunile 1-6 sunt marcate, iar cardurile Anki existente sunt aliniate 1 la 1 cu harta |
 | 7 | Transferul datelor prin `GITHUB_ENV`, `GITHUB_OUTPUT` si job outputs | Datele circula controlat intre pasi si joburi |
 | 8 | Adaugarea conditiilor si workflow commands | Joburi executate sau omise intentionat si annotations vizibile |
 | 9 | Generarea unui raport cu `GITHUB_STEP_SUMMARY` si badge | Rezultatul pipeline-ului este lizibil fara parcurgerea tuturor logurilor |

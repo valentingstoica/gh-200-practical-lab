@@ -16,8 +16,13 @@ practice, debugging și recapitulare progresivă, nu prin memorarea izolată a t
 - Teoria este introdusă în porții mici, când devine necesară practicii.
 - Explicațiile sunt beginner-friendly, concrete și orientate spre beneficiul
   profesional pentru software development și DevOps.
-- GitHub Actions este operat atât din GitHub Web UI, cât și prin `gh` și,
-  gradual, `gh api`.
+- GitHub Actions este operat în principal din GitHub Web UI, la alegerea
+  utilizatorului. `gh` și `gh api` apar numai în sesiunile dedicate
+  competențelor REST API cerute de examen.
+- Procedura generală de învățare este descrisă în `LEARNING-METHOD.md`: harta
+  cunoștințelor este adevărul suprem, roadmap-ul și didactica urmează harta,
+  iar Anki oglindește harta 1 la 1 pentru stabilizarea memoriei.
+- Cardurile Anki sunt în engleză, în `anki/`, importabile prin File → Import.
 - Debugging-ul, securitatea, costul și găsirea informației în documentația
   oficială sunt exersate recurent.
 - Înaintea fiecărei sesiuni, asistentul explică exact ce intenționează să facă.
