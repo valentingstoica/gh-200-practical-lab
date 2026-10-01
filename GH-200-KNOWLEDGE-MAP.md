@@ -30,8 +30,11 @@ oglindește 1 la 1.
 - **Anki:** fiecare element `✅ Sn` are carduri în `anki/Snn.txt`, cu tag-urile
   `COD COD-NN Sn`. Elementele nepredate primesc carduri când sunt predate.
   Cardurile se modelează după hartă: orice schimbare a unui element se
-  propagă în cardurile lui. Cardurile se învață la finalul fiecărei sesiuni,
-    filtrate în Anki după tag-ul `Sn`.
+  propagă în cardurile lui. Întrebarea cardului este pusă natural în lecție,
+  după ce elementul a fost înțeles. O cunoștință nouă apărută la predare
+  primește card numai după ce devine element al hărții; ce este în afara
+  programei nu intră. Cardurile se învață la finalul fiecărei sesiuni,
+  filtrate în Anki după tag-ul `Sn`.
 
 ## Codurile programei oficiale
 

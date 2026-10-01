@@ -41,7 +41,16 @@ Ordinea de autoritate este:
   didactic și pedagogic. Nu se învață „pentru carduri”.
 - Explicațiile pornesc de la ceva deja practicat de utilizator, introduc o
   singură idee pe rând și se încheie cu o întrebare simplă de verificare.
-- Cardurile nu sunt arătate în timpul lecției și nu dictează conținutul ei.
+- Predarea se face prietenos și cald, ca un profesor bun: cu răbdare,
+  încurajare și ritmul utilizatorului.
+- Cardurile nu dictează conținutul lecției; lecția se construiește după hartă.
+- Întrebarea cardului apare în lecție (stabilit de utilizator în sesiunea 7,
+  2026-10-01): după ce un element a fost predat și înțeles, asistentul pune
+  în chat întrebarea cardului acelui element. Introducerea ei este naturală și
+  caldă, parte firească din conversație, nu un anunț rigid de tipul „și acum o
+  întrebare din Anki”. După răspunsul utilizatorului, formularea se ajustează
+  dacă a fost neclară, iar cardul final intră în `anki/Snn.txt`. Astfel
+  utilizatorul întâlnește întrebările cardurilor încă din predare.
 - Un capitol este terminat când toate elementele lui din hartă au fost predate
   și înțelese.
 
@@ -56,6 +65,10 @@ examen.
 - Cardurile se modelează după hartă. Când un element se schimbă, cardurile
   lui se schimbă la fel; când un element se adaugă, se împarte sau se
   elimină, cardurile urmează.
+- Cunoștințele noi apărute în timpul predării, care nu au încă un element,
+  ajung în Anki numai prin hartă: dacă țin de programa oficială, se adaugă
+  întâi ca element nou în hartă, cu următorul ID liber, apoi primesc card.
+  Ce este în afara programei nu intră nici în hartă, nici în Anki.
 - Un card are o întrebare clară și directă, iar răspunsul scurt și exact
   **este chiar cunoștința** care trebuie păstrată. Dacă utilizatorul memorează
   răspunsul, a câștigat exact ce trebuia.

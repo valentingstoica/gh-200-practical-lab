@@ -310,6 +310,12 @@
   se învață pe sesiune, la finalul fiecărei sesiuni, selectate în Anki după
   tag-ul `Sn` (Custom Study → Study by card state or tag, conform manualului
   Anki). O propunere de învățare pe capitole a fost respinsă explicit.
+- Înaintea reperului 7, utilizatorul a adaptat metoda: predarea se face
+  prietenos și cald, ca un profesor bun; după ce un element este înțeles,
+  întrebarea cardului lui este pusă în lecție, introdusă natural și cald, nu
+  rigid; cunoștințele noi apărute la predare intră întâi în hartă (dacă țin de
+  programă), apoi în Anki. Regulile sunt în `LEARNING-METHOD.md`, în
+  convențiile hărții și în `.github/copilot-instructions.md`.
 
 ## Ce nu s-a făcut
 
