@@ -42,3 +42,14 @@ jobs:
               run: |
                   echo "DB_PASSWORD: $DB_PASSWORD"
                   echo "parola-de-test-123"
+    needs:
+        needs: show_context
+        name: Needs context
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Show Needs Build Result
+              env:
+                  BUILD_RESULT: ${{needs.show_context.result}}
+              run: |
+                  echo "Build was: $BUILD_RESULT"
