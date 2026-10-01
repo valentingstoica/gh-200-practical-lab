@@ -11,7 +11,7 @@ inițială.
 
 | Strat | Rol | În acest workspace |
 | --- | --- | --- |
-| Harta cunoștințelor | Adevărul suprem: **tot** ce trebuie știut, teorie și practică | `GH-200-KNOWLEDGE-MAP.md` (de construit) |
+| Harta cunoștințelor | Adevărul suprem: **tot** ce trebuie știut, teorie și practică | `GH-200-KNOWLEDGE-MAP.md` |
 | Roadmap, metode, didactică | **Cum** și **în ce ordine** se învață elementele hărții | `GH-200-STUDY-ROADMAP.md`, `README.md`, `.github/copilot-instructions.md` |
 | Anki | **Oglinda 1 la 1** a hărții, pentru stabilizarea memoriei | `anki/` |
 
@@ -60,16 +60,26 @@ examen.
   întâmplă?”
 - Exemplu corect (stabilizare): „Ce se întâmplă cu un job dacă un job din
   `needs` eșuează?” → „Este sărit (skipped).”
-- La finalul unui capitol, utilizatorul învață toate cardurile capitolului.
-  Pentru că Anki oglindește harta 1 la 1, a ști toate cardurile înseamnă a
-  păstra tot ce trebuie știut.
+- După fiecare sesiune, utilizatorul învață cardurile elementelor predate în
+  sesiune. Pentru că Anki oglindește harta 1 la 1, a ști toate cardurile
+  înseamnă a păstra tot ce a fost predat.
 
 ## Format Anki în acest workspace
 
 - Carduri în engleză, în fișiere text importate nativ în Anki prin
   **File → Import** (Anki 2.1.54+).
+- Un fișier pe sesiune: `anki/Snn.txt` (de exemplu `anki/S06.txt`), cu
+  cardurile elementelor marcate `✅ Sn` în hartă.
 - Anteturi: `#separator:Tab`, `#html:true`, `#notetype:Basic`, `#deck:GH-200`
   și `#tags column:3`. A treia coloană a fiecărui card conține tag-urile lui:
-  capitolul și ID-ul elementului din hartă.
+  capitolul, ID-ul elementului din hartă și sesiunea (de exemplu
+  `CTX CTX-05 S6`).
 - Fișierele sunt versionate în Git. Utilizatorul le revizuiește înainte de
   import.
+
+## Cum folosește utilizatorul cardurile
+
+1. După fiecare sesiune, importă un singur fișier nou, `anki/Snn.txt`, prin
+   **File → Import**.
+2. În aceeași zi învață cardurile noi din deck-ul `GH-200`.
+3. Apoi face zilnic recapitulările programate de Anki.

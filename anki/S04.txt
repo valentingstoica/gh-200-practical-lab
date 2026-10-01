@@ -1,0 +1,19 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags column:3
+Why quote <code>node-version: "20.10"</code> in YAML?	Unquoted, YAML parses it as the number 20.1.	WF WF-07 S4
+For <code>pull_request</code>, what does the <code>branches</code> filter match?	The target (base) branch of the pull request, not the source branch.	TRG TRG-12 S4
+What are the default activity types of <code>pull_request</code>?	<code>opened</code>, <code>synchronize</code>, <code>reopened</code>.	TRG TRG-13 S4
+What happens if you declare <code>types:</code> explicitly for <code>pull_request</code>?	It replaces the default activity types list; it does not add to it.	TRG TRG-14 S4
+Why can an unfiltered <code>push</code> plus <code>pull_request</code> produce two runs for one commit?	Each event is evaluated independently; a commit on a branch with an open PR triggers both.	TRG TRG-15 S4
+For <code>push</code> and <code>pull_request</code>, where is the workflow definition read from?	From the triggering commit, not from the default branch.	TRG TRG-16 S4
+For <code>schedule</code>, where is the workflow definition read from?	From the default branch.	TRG TRG-17 S4
+For <code>workflow_dispatch</code>, which version of the workflow file runs?	The one on the branch or tag selected when dispatching. The file must also exist on the default branch for the event to trigger.	TRG TRG-18 S4
+Where is the workflow definition read from for <code>pull_request_target</code>?	From the target (base) branch of the pull request.	TRG TRG-19 S4
+Why must changes in <code>.github/workflows/</code> be reviewed like executable code?	Whoever controls a branch controls the workflow triggered from it and the code it runs.	TRG TRG-21 S4
+What is the <code>display_title</code> of a run for <code>pull_request</code> vs <code>push</code>?	<code>pull_request</code>: the PR title. <code>push</code>: the commit message.	TRB TRB-01 S4
+Why is a public repository plus a self-hosted runner dangerous?	Self-hosted runners are not destroyed after the job, so untrusted code can run on and persist on your machine.	RUN RUN-02 S4
+What does <code>permissions: contents: read</code> grant?	Read access to repository contents. Every permission not listed is set to <code>none</code>, except <code>metadata</code>.	TOK TOK-03 S4
+Where do you check which versions of an action exist?	In the releases and tags of the action's repository (e.g. <code>github.com/actions/checkout/releases</code>).	SUP SUP-01 S4

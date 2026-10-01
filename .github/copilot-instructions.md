@@ -98,6 +98,10 @@ observarea rezultatelor si depanare, nu oferirea imediata a solutiilor complete.
   cerinta de a explica planul si de a obtine aprobarea in prealabil. Nu raspunde
   utilizatorului si nu incepe nicio alta actiune pana cand citirea nu este
   finalizata.
+- Tot inainte de primul raspuns, si cu aceeasi exceptie, citeste in
+  `GH-200-KNOWLEDGE-MAP.md` sectiunea „Conventii” si capitolele hartii legate
+  de taskul din `NEXT-SESSION.md`. Sesiunea preda elementele acelor capitole,
+  iar statusul si cardurile Anki se actualizeaza dupa ID-urile lor.
 - `CURRENT-STATE.md` descrie progresul, deciziile si lucrurile ramase nefacute.
 - `NEXT-SESSION.md` trebuie sa contina exact un singur task pentru sesiunea
   urmatoare.

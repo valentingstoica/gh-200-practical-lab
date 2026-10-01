@@ -1,0 +1,7 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags column:3
+Why does a failing <code>npm test</code> fail a workflow step?	The command exits with a non-zero exit code (e.g. 1). A non-zero exit code marks the step as failed.	WF WF-05 S3
+Why should CI run the automated tests?	To detect regressions automatically on every change, instead of relying on manual checks.	WF WF-06 S3

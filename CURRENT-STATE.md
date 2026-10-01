@@ -180,9 +180,11 @@
 - Dacă `push` nu este filtrat, un commit pe un branch cu pull request deschis
   produce două rulări, deoarece evenimentele sunt evaluate independent.
 - Pentru `push` și `pull_request`, definiția workflow-ului este citită din
-  commitul declanșator, nu de pe branch-ul default. Pentru `schedule` și
-  `workflow_dispatch` este citită de pe branch-ul default, iar pentru
-  `pull_request_target` de pe branch-ul țintă.
+  commitul declanșator, nu de pe branch-ul default. Pentru `schedule` este
+  citită de pe branch-ul default, iar pentru `pull_request_target` de pe
+  branch-ul țintă. Pentru `workflow_dispatch` rulează versiunea de pe
+  branch-ul sau tag-ul ales la declanșare; fișierul trebuie să existe și pe
+  branch-ul default. (Corectat în reperul 6b; vezi lecția de mai jos.)
 - Consecința de securitate este că cine controlează un branch controlează și
   declanșatoarele, deci modificările din `.github/workflows/` se revizuiesc ca
   fiind cod executabil.
@@ -287,11 +289,25 @@
 - Au fost generate 58 de carduri provizorii în `anki/session-01.txt` …
   `anki/session-06.txt`, înaintea existenței hărții. Ele trebuie aliniate cu
   harta în reperul 6b și nu au fost încă importate.
+- Reperul 6b a creat `GH-200-KNOWLEDGE-MAP.md` din programa oficială
+  („Skills measured as of January 2026”, reverificată la 2026-10-01):
+  28 de capitole pe subiecte, 256 de elemente cu ID `COD-NN`, tip T/P și
+  bullet-ul oficial sursă. 65 de elemente sunt marcate ca predate în
+  sesiunile 1-6. Elementele nepredate numesc ce trebuie știut; conținutul
+  exact se verifică în documentația oficială la predare.
+- Cardurile au fost aliniate cu harta: 65 de carduri, exact unul pentru
+  fiecare element predat; alinierea 1 la 1 a fost verificată automat.
+  Cardul despre `package.json` și npm a fost eliminat, fiind în afara
+  programei, iar 8 carduri au fost adăugate pentru elemente predate fără card.
+- Cardurile au fost grupate inițial pe capitole (`anki/COD.txt`). Utilizatorul
+  a observat că așa nu știe ce să importe și să învețe după o sesiune, deoarece
+  o sesiune predă bucăți din mai multe capitole. Au fost regrupate într-un
+  fișier pe sesiune (`anki/S01.txt` … `anki/S06.txt`), cu tag-urile
+  `COD COD-NN Sn`. Procedura de folosire este în `LEARNING-METHOD.md`.
 
 ## Ce nu s-a făcut
 
-- Harta cunoștințelor GH-200 (`GH-200-KNOWLEDGE-MAP.md`) nu există încă.
-- Cardurile Anki provizorii nu sunt aliniate cu harta și nu au fost importate.
+- Cardurile din `anki/` nu au fost încă importate în Anki.
 - Contextele au fost practicate la nivel de bază; condițiile `if` cu
   `always()` / `failure()` aparțin sesiunii 8, iar opțiunile avansate ale
   matricei (`include`, `exclude`, `fail-fast`, `max-parallel`) sesiunii 10.
@@ -312,5 +328,17 @@
   traseu numai printr-o modificare aprobată a roadmap-ului.
 - Elementele recurente, precum debugging-ul, se exersează în interiorul
   sesiunii curente, nu ca sesiuni separate adăugate ad-hoc.
-- Poziția reală confirmată: sesiunile 1-6 sunt finalizate, iar următorul reper
-  este 6b, construirea hărții cunoștințelor GH-200.
+- Poziția reală confirmată: sesiunile 1-6 și reperul 6b sunt finalizate, iar
+  următorul reper este 7.
+
+## Lecție despre acuratețe (reperul 6b)
+
+- În sesiunea 4 s-a consemnat greșit că `workflow_dispatch` citește definiția
+  workflow-ului de pe branch-ul default. Documentația oficială
+  „Events that trigger workflows” indică pentru `workflow_dispatch`:
+  `GITHUB_SHA` = „Last commit on the `GITHUB_REF` branch or tag”, iar
+  `GITHUB_REF` = „Branch or tag that received dispatch”. Eroarea a fost
+  descoperită la transformarea afirmației în card.
+- Memoria workspace-ului poate conține erori. O afirmație veche se reverifică
+  în documentația oficială înainte de a fi transformată în element al hărții
+  sau în card.

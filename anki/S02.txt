@@ -1,0 +1,11 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:GH-200
+#tags column:3
+Which event lets you start a workflow manually from the Actions tab?	<code>workflow_dispatch</code>	TRG TRG-02 S2
+Where must a <code>workflow_dispatch</code> workflow exist for the "Run workflow" button to appear?	On the default branch.	TRG TRG-03 S2
+Which keys define a <code>workflow_dispatch</code> input?	<code>description</code>, <code>required</code>, <code>type</code> (e.g. <code>string</code>) and <code>default</code>.	TRG TRG-04 S2
+How do you read a <code>workflow_dispatch</code> input named <code>recipient</code>?	<code>${{ inputs.recipient }}</code>	TRG TRG-05 S2
+What is <code>${{ }}</code> in GitHub Actions?	Expression syntax. GitHub evaluates it and substitutes the result into the workflow text before the shell runs.	EXP EXP-01 S2
+Why write <code>"$RECIPIENT"</code> in double quotes in bash?	So the shell treats the value as one argument, without word splitting or glob expansion.	INJ INJ-04 S2

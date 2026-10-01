@@ -85,3 +85,7 @@ integrare continuă `.github/workflows/ci.yml` rulează `npm test` la `push` pe
 `master` și la `pull_request` către `master`, cu permisiuni minime. Fluxul a fost
 verificat practic printr-un branch, un pull request și un merge, observând cele
 trei rulări rezultate.
+
+Harta cunoștințelor `GH-200-KNOWLEDGE-MAP.md` conține toate elementele
+programei oficiale, cu ID-uri stabile și statusul predării. Cardurile Anki din
+`anki/` o oglindesc 1 la 1, câte un fișier pe sesiune.

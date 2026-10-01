@@ -1,8 +1,0 @@
-#separator:Tab
-#html:true
-#notetype:Basic
-#deck:GH-200
-#tags:gh-200 session-03
-What is the difference between <code>package.json</code> and npm?	<code>package.json</code> is the project manifest; npm is the tool that reads it and runs its scripts.
-Why does a failing <code>npm test</code> fail a workflow step?	The command exits with a non-zero exit code (e.g. 1). A non-zero exit code marks the step as failed.
-Why should CI run the automated tests?	To detect regressions automatically on every change, instead of relying on manual checks.
