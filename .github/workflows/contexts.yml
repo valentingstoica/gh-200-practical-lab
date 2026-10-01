@@ -8,8 +8,8 @@ env:
     COLOR: red
 
 jobs:
-    job_id:
-        name: Job Id
+    show_context:
+        name: Show context
         runs-on: ubuntu-latest
 
         steps:
@@ -29,3 +29,9 @@ jobs:
                   echo "OS: $OS"
                   echo "Runner Name: $NAME"
                   echo "COLOR: $COLOR"
+
+            - name: Show vars
+              env:
+                  APP_ENV: ${{ vars.APP_ENV }}
+              run: |
+                  echo "APP_ENV: $APP_ENV"
