@@ -1,0 +1,15 @@
+name: Contexts
+
+on: workflow_dispatch
+
+permissions: {}
+
+jobs:
+    show_github_actor:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Show Github Actor
+              env:
+                  ACTOR: ${{ github.actor }}
+              run: echo "$ACTOR"
