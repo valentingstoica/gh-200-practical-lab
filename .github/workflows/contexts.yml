@@ -19,5 +19,5 @@ jobs:
                   OS: ${{ runner.os }}
                   NAME: ${{ runner.name }}
               run: |
-                  echo "OS: $OS\n"
+                  echo "OS: $OS"
                   echo "Runner Name: $NAME"
