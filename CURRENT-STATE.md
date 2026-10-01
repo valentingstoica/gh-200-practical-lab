@@ -304,6 +304,12 @@
   o sesiune predă bucăți din mai multe capitole. Au fost regrupate într-un
   fișier pe sesiune (`anki/S01.txt` … `anki/S06.txt`), cu tag-urile
   `COD COD-NN Sn`. Procedura de folosire este în `LEARNING-METHOD.md`.
+- Utilizatorul a precizat ulterior două reguli, adăugate explicit în
+  `LEARNING-METHOD.md` și în convențiile hărții: harta nu este statică, ci se
+  schimbă pe măsură ce învățăm, iar cardurile se modelează după ea; cardurile
+  se învață pe sesiune, la finalul fiecărei sesiuni, selectate în Anki după
+  tag-ul `Sn` (Custom Study → Study by card state or tag, conform manualului
+  Anki). O propunere de învățare pe capitole a fost respinsă explicit.
 
 ## Ce nu s-a făcut
 

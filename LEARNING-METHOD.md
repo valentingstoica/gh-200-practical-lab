@@ -31,6 +31,9 @@ Ordinea de autoritate este:
 - Conține atât concepte teoretice, cât și deprinderi practice.
 - Fiecare element are un ID stabil, de exemplu `CTX-07`.
 - Un element este o bucată de cunoaștere mică, clară și verificabilă.
+- Harta **nu este statică**. Se schimbă pe măsură ce învățăm: la predare,
+  elementele se precizează, se împart, se corectează, iar cele lipsă se
+  adaugă. Sursele oficiale rămân singura bază pentru conținutul ei.
 
 ## Învățarea
 
@@ -50,6 +53,9 @@ examen.
 
 - Fiecare element din hartă are carduri care poartă același ID. Nu există
   element fără card și nici card fără element.
+- Cardurile se modelează după hartă. Când un element se schimbă, cardurile
+  lui se schimbă la fel; când un element se adaugă, se împarte sau se
+  elimină, cardurile urmează.
 - Un card are o întrebare clară și directă, iar răspunsul scurt și exact
   **este chiar cunoștința** care trebuie păstrată. Dacă utilizatorul memorează
   răspunsul, a câștigat exact ce trebuia.
@@ -60,9 +66,10 @@ examen.
   întâmplă?”
 - Exemplu corect (stabilizare): „Ce se întâmplă cu un job dacă un job din
   `needs` eșuează?” → „Este sărit (skipped).”
-- După fiecare sesiune, utilizatorul învață cardurile elementelor predate în
-  sesiune. Pentru că Anki oglindește harta 1 la 1, a ști toate cardurile
-  înseamnă a păstra tot ce a fost predat.
+- Cardurile se învață **pe sesiune**: la finalul fiecărei sesiuni,
+  utilizatorul învață cardurile elementelor predate în acea sesiune. Pentru
+  că Anki oglindește harta 1 la 1, a ști toate cardurile înseamnă a păstra
+  tot ce a fost predat.
 
 ## Format Anki în acest workspace
 
@@ -81,5 +88,10 @@ examen.
 
 1. După fiecare sesiune, importă un singur fișier nou, `anki/Snn.txt`, prin
    **File → Import**.
-2. În aceeași zi învață cardurile noi din deck-ul `GH-200`.
+2. În aceeași zi învață cardurile noi ale sesiunii. Pentru a le selecta
+   numai pe ele, alege în deck-ul `GH-200` **Custom Study → Study by card
+   state or tag**, cu cardurile noi și tag-ul sesiunii (de exemplu `S6`).
 3. Apoi face zilnic recapitulările programate de Anki.
+4. Când harta schimbă un element deja importat, asistentul actualizează
+   cardul în fișierul lui `anki/Snn.txt`, iar utilizatorul îl corectează și
+   în Anki.

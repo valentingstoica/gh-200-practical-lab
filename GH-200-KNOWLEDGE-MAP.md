@@ -24,8 +24,14 @@ oglindește 1 la 1.
 - **Tip:** `T` = teorie (ce și de ce), `P` = practică (cum se face).
 - **Sursă:** bullet-ul oficial din programa GH-200, conform codurilor de mai jos.
 - **Status:** `✅ Sn` = predat și înțeles în sesiunea `n`; gol = nepredat.
+- **Hartă vie:** harta se schimbă pe măsură ce învățăm. La predare, elementele
+  se precizează, se împart, se corectează sau se adaugă, pe baza surselor
+  oficiale.
 - **Anki:** fiecare element `✅ Sn` are carduri în `anki/Snn.txt`, cu tag-urile
   `COD COD-NN Sn`. Elementele nepredate primesc carduri când sunt predate.
+  Cardurile se modelează după hartă: orice schimbare a unui element se
+  propagă în cardurile lui. Cardurile se învață la finalul fiecărei sesiuni,
+    filtrate în Anki după tag-ul `Sn`.
 
 ## Codurile programei oficiale
 
