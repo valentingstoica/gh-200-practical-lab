@@ -13,7 +13,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Show Github Actor
+            - id: show_github_actor
+              name: Show Github Actor
               env:
                   ACTOR: ${{ github.actor }}
               run: |
@@ -42,6 +43,14 @@ jobs:
               run: |
                   echo "DB_PASSWORD: $DB_PASSWORD"
                   echo "parola-de-test-123"
+
+            - name: Show step outcome
+              env:
+                  STEP_OUTCOME: ${{ steps.show_github_actor.outcome }}
+                  JOB_STATUS: ${{ job.status }}
+              run: |
+                  echo "STEP_OUTCOME: $STEP_OUTCOME"
+                  echo "JOB_STATUS: $JOB_STATUS"
     needs:
         needs: show_context
         name: Needs context
