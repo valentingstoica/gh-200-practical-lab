@@ -53,3 +53,28 @@ jobs:
                   BUILD_RESULT: ${{needs.show_context.result}}
               run: |
                   echo "Build was: $BUILD_RESULT"
+
+    matrix:
+        name: Matrix
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest]
+        runs-on: ${{ strategy.matrix.os }}
+        steps:
+            - name: Show runner os
+              env:
+                  RUNNER_OS: ${{ runner.os }}
+              run: |
+                  echo "RUNNER_OS: $RUNNER_OS"
+
+            - name: Show job index
+              env:
+                  JOB_INDEX: ${{ strategy.job-index }}
+              run: |
+                  echo "JOB_INDEX: $JOB_INDEX"
+
+            - name: Show job total
+              env:
+                  JOB_TOTAL: ${{ strategy.job-total }}
+              run: |
+                  echo: "JOB_TOTAL: $JOB_TOTAL"
