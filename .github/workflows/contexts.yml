@@ -59,7 +59,7 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest]
-        runs-on: ${{ strategy.matrix.os }}
+        runs-on: ${{ matrix.os }}
         steps:
             - name: Show runner os
               env:
