@@ -41,3 +41,4 @@ jobs:
                   DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
               run: |
                   echo "DB_PASSWORD: $DB_PASSWORD"
+                  echo "parola-de-test-123"
