@@ -5,11 +5,18 @@ on: workflow_dispatch
 permissions: {}
 
 jobs:
-    show_github_actor:
+    "show_github_actor":
         runs-on: ubuntu-latest
 
         steps:
             - name: Show Github Actor
               env:
                   ACTOR: ${{ github.actor }}
-              run: echo "$ACTOR"
+              run: |
+                  echo "$ACTOR"
+            - name: "Show Runner Info"
+              env:
+                  OS: ${{ runner.os }}
+                  NAME: ${{ runner.name }}
+              run: |
+                  echo "OS: $OS\nRunner Name: $NAME"
